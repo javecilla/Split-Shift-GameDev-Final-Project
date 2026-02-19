@@ -3,7 +3,10 @@ using UnityEngine;
 public class TestScript : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float movementSpeed = 15f;
+    public float movementSpeed = 10f;
+    public float jumpForce = 7.5f;
+    private bool isGrounded = true;
+    private bool canDoubleJump = false;
 
     void Start()
     {
@@ -13,20 +16,29 @@ public class TestScript : MonoBehaviour
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
 
-        rb.linearVelocity = new Vector2(moveHorizontal * movementSpeed, moveVertical * movementSpeed);
+        rb.linearVelocity = new Vector2(moveHorizontal * movementSpeed, rb.linearVelocity.y);
 
-        //jump
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+            if (isGrounded)
+            {
+                //first jump (from ground)
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                isGrounded = false;
+                canDoubleJump = true; //enable the double jump
+            }
+            else if (canDoubleJump)
+            {
+                //second jump (in air)
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                canDoubleJump = false; //disable further double jumps until we land again
+            }
         }
-
-        //double jump
-        if (Input.GetKeyDown(KeyCode.Space) && rb.linearVelocity.y == 0)
-        {
-            rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
-        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGrounded = true;
+        canDoubleJump = false;
     }
 }
