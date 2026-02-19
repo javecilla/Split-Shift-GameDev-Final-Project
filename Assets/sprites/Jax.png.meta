@@ -1,0 +1,2405 @@
+fileFormatVersion: 2
+guid: b0e24f653e6860943a09e3046be7ec47
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3845293797539078763
+    second: Jax_0
+  - first:
+      213: 8765864386789032218
+    second: Jax_1
+  - first:
+      213: -2135987704986674990
+    second: Jax_2
+  - first:
+      213: -1685143236319190572
+    second: Jax_3
+  - first:
+      213: -2638015319465433205
+    second: Jax_4
+  - first:
+      213: 5028778672868932224
+    second: Jax_5
+  - first:
+      213: 2854690644139575486
+    second: Jax_6
+  - first:
+      213: 161453176704884681
+    second: Jax_7
+  - first:
+      213: -5359093658899378585
+    second: Jax_8
+  - first:
+      213: -9009661359723106244
+    second: Jax_9
+  - first:
+      213: 1084536141960685383
+    second: Jax_10
+  - first:
+      213: -500265946317772075
+    second: Jax_11
+  - first:
+      213: -6358868219037714611
+    second: Jax_12
+  - first:
+      213: 1424615079664702581
+    second: Jax_13
+  - first:
+      213: -3018778158559482459
+    second: Jax_14
+  - first:
+      213: -1131283768933359918
+    second: Jax_15
+  - first:
+      213: 2671287964810072580
+    second: Jax_16
+  - first:
+      213: 4000222595132407918
+    second: Jax_17
+  - first:
+      213: -2028527174585761981
+    second: Jax_18
+  - first:
+      213: 6179086591467409073
+    second: Jax_19
+  - first:
+      213: 590536656903821241
+    second: Jax_20
+  - first:
+      213: -2090855247149254973
+    second: Jax_21
+  - first:
+      213: -1834813007566712702
+    second: Jax_22
+  - first:
+      213: -7187272247887628215
+    second: Jax_23
+  - first:
+      213: -6186103159419784818
+    second: Jax_24
+  - first:
+      213: -4520558108251464585
+    second: Jax_25
+  - first:
+      213: -2061415630225130872
+    second: Jax_26
+  - first:
+      213: -7563251487831693214
+    second: Jax_27
+  - first:
+      213: -1746449157168995861
+    second: Jax_28
+  - first:
+      213: 7309090532724378778
+    second: Jax_29
+  - first:
+      213: 7249989543873345155
+    second: Jax_30
+  - first:
+      213: -3983031474006401863
+    second: Jax_31
+  - first:
+      213: 7908694130594770778
+    second: Jax_32
+  - first:
+      213: 6372144368724207665
+    second: Jax_33
+  - first:
+      213: 4306413533503027467
+    second: Jax_34
+  - first:
+      213: -5282191501764892512
+    second: Jax_35
+  - first:
+      213: 8134329830105157727
+    second: Jax_36
+  - first:
+      213: -2066398323689473249
+    second: Jax_37
+  - first:
+      213: 108893839912842928
+    second: Jax_38
+  - first:
+      213: 5774696657162370024
+    second: Jax_39
+  - first:
+      213: 7218142104216952387
+    second: Jax_40
+  - first:
+      213: -4073001862688664234
+    second: Jax_41
+  - first:
+      213: -3263123918333100811
+    second: Jax_42
+  - first:
+      213: -3559634632217968605
+    second: Jax_43
+  - first:
+      213: -665716124026974397
+    second: Jax_44
+  - first:
+      213: -4662390261544318539
+    second: Jax_45
+  - first:
+      213: -589452142764626753
+    second: Jax_46
+  - first:
+      213: 5346799541403901627
+    second: Jax_47
+  - first:
+      213: -2656180887896109039
+    second: Jax_48
+  - first:
+      213: 3856711048065930245
+    second: Jax_49
+  - first:
+      213: 2938968220437140881
+    second: Jax_50
+  - first:
+      213: 1122290484954114817
+    second: Jax_51
+  - first:
+      213: -2648531266403813556
+    second: Jax_52
+  - first:
+      213: -8096184859128233374
+    second: Jax_53
+  - first:
+      213: -5579588093888202686
+    second: Jax_54
+  - first:
+      213: -1386418467741068057
+    second: Jax_55
+  - first:
+      213: -988757019725952755
+    second: Jax_56
+  - first:
+      213: 7630759100756169080
+    second: Jax_57
+  - first:
+      213: -5392058165107629727
+    second: Jax_58
+  - first:
+      213: -420654193558746744
+    second: Jax_59
+  - first:
+      213: -3323969429539518023
+    second: Jax_60
+  - first:
+      213: -2196880706404302169
+    second: Jax_61
+  - first:
+      213: -6038431325149568503
+    second: Jax_62
+  - first:
+      213: 5950305069791774512
+    second: Jax_63
+  - first:
+      213: 7131734544981796224
+    second: Jax_64
+  - first:
+      213: -3111537995177941239
+    second: Jax_65
+  - first:
+      213: 3051638798272965785
+    second: Jax_66
+  - first:
+      213: 8727045175701921968
+    second: Jax_67
+  - first:
+      213: -3850451092769406462
+    second: Jax_68
+  - first:
+      213: 6019943639853079816
+    second: Jax_69
+  - first:
+      213: -8014878817538933905
+    second: Jax_70
+  - first:
+      213: 7063699569052191717
+    second: Jax_71
+  - first:
+      213: -8064636120033772270
+    second: Jax_72
+  - first:
+      213: -4490956063820233881
+    second: Jax_73
+  - first:
+      213: 3121283731870297708
+    second: Jax_74
+  - first:
+      213: -6304338991191322631
+    second: Jax_75
+  - first:
+      213: -3975087540147715744
+    second: Jax_76
+  - first:
+      213: -1303678815999150482
+    second: Jax_77
+  - first:
+      213: -6018760291829084420
+    second: Jax_78
+  - first:
+      213: -8017077814131998561
+    second: Jax_79
+  - first:
+      213: -7687506163681340498
+    second: Jax_80
+  - first:
+      213: 5468320557984541382
+    second: Jax_81
+  - first:
+      213: 2212609545006503199
+    second: Jax_82
+  - first:
+      213: 2427480251094223183
+    second: Jax_83
+  - first:
+      213: -2257116874146247987
+    second: Jax_84
+  - first:
+      213: -6588579244490781813
+    second: Jax_85
+  - first:
+      213: 4507542670237760153
+    second: Jax_86
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jax_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 71
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d9ba41aa5c2aac0800000000000000
+      internalID: -3845293797539078763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 594
+        width: 97
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11cecb573b96a970800000000000000
+      internalID: 8765864386789032218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_2
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 610
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d8daafcf727b52e0800000000000000
+      internalID: -2135987704986674990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 382
+        width: 160
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1ea83a72b2d98e0800000000000000
+      internalID: -1685143236319190572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_4
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 610
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8769333b03e36bd0800000000000000
+      internalID: -2638015319465433205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_5
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 556
+        width: 57
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ab9623f8fc9c540800000000000000
+      internalID: 5028778672868932224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_6
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 529
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8029b1406ed9720800000000000000
+      internalID: 2854690644139575486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 542
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf5a5d0fc89d3200800000000000000
+      internalID: 161453176704884681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_8
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 545
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e014ff5bca0a5b0800000000000000
+      internalID: -5359093658899378585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 545
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3034238ab047f280800000000000000
+      internalID: -9009661359723106244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 67
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747a3afffdb0d0f00800000000000000
+      internalID: 1084536141960685383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 471
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da2188b5c2be09f0800000000000000
+      internalID: -500265946317772075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_12
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 491
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d477cb6ab03c0c7a0800000000000000
+      internalID: -6358868219037714611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_13
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 478
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5745415fddf35c310800000000000000
+      internalID: 1424615079664702581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 478
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adaa5b42452b16d0800000000000000
+      internalID: -3018778158559482459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 364
+        width: 57
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dedf8ce76fdc40f0800000000000000
+      internalID: -1131283768933359918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_16
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 412
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402d74b3042521520800000000000000
+      internalID: 2671287964810072580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_17
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 411
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60cb559145a38730800000000000000
+      internalID: 4000222595132407918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_18
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 399
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34fb695484939d3e0800000000000000
+      internalID: -2028527174585761981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_19
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 390
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be4bc8448680c550800000000000000
+      internalID: 6179086591467409073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_20
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 390
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b7599de5f1023800800000000000000
+      internalID: 590536656903821241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_21
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 390
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c638e40b3acbf2e0800000000000000
+      internalID: -2090855247149254973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_22
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 301
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28058b67a4f6986e0800000000000000
+      internalID: -1834813007566712702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_23
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 311
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94872a868fda14c90800000000000000
+      internalID: -7187272247887628215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_24
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 319
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81bcdea3fb862aa0800000000000000
+      internalID: -6186103159419784818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_25
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 319
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77cd82bf950c341c0800000000000000
+      internalID: -4520558108251464585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_26
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 319
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a3ef9f7616463e0800000000000000
+      internalID: -2061415630225130872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_27
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 319
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268e8d8f7dee90790800000000000000
+      internalID: -7563251487831693214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_28
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 319
+        width: 53
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be169a0aebd53c7e0800000000000000
+      internalID: -1746449157168995861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_29
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 319
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c05324d1b1f6560800000000000000
+      internalID: 7309090532724378778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_30
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 319
+        width: 29
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386fddbf3132d9460800000000000000
+      internalID: 7249989543873345155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_31
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 319
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcd5a63afd69b8c0800000000000000
+      internalID: -3983031474006401863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_32
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 319
+        width: 56
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f6153e86351cd60800000000000000
+      internalID: 7908694130594770778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_33
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 319
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138ef43da876e6850800000000000000
+      internalID: 6372144368724207665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_34
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 319
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b09f168da4473cb30800000000000000
+      internalID: 4306413533503027467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_35
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 319
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a867bdb0d2e1b6b0800000000000000
+      internalID: -5282191501764892512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_36
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 211
+        width: 67
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f50184902e1f2e070800000000000000
+      internalID: 8134329830105157727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_37
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 250
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bb6004cada253e0800000000000000
+      internalID: -2066398323689473249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_38
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 253
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6bb36de5ed28100800000000000000
+      internalID: 108893839912842928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_39
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 254
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb7cc79308d32050800000000000000
+      internalID: 5774696657162370024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_40
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 253
+        width: 47
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e542c100efb2460800000000000000
+      internalID: 7218142104216952387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_41
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 253
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65510f4b26ac977c0800000000000000
+      internalID: -4073001862688664234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_42
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 253
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fcbca5c51e07b2d0800000000000000
+      internalID: -3263123918333100811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_43
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 253
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32048786923a99ec0800000000000000
+      internalID: -3559634632217968605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_44
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 175
+        width: 57
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f4f1a56b6e2c6f0800000000000000
+      internalID: -665716124026974397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_45
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 197
+        width: 55
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9096072ccdb4fb0800000000000000
+      internalID: -4662390261544318539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_46
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 158
+        width: 66
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbceb623668d1d7f0800000000000000
+      internalID: -589452142764626753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_47
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 182
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbed996bad5a33a40800000000000000
+      internalID: 5346799541403901627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_48
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 106
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11055c53e89532bd0800000000000000
+      internalID: -2656180887896109039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_49
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 82
+        width: 43
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5045b45b34ac58530800000000000000
+      internalID: 3856711048065930245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_50
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 92
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1955151760059c820800000000000000
+      internalID: 2938968220437140881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 106
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bad7aff3d239f00800000000000000
+      internalID: 1122290484954114817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_52
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 106
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c473c7188d68e3bd0800000000000000
+      internalID: -2648531266403813556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_53
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 106
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26204cb14c294af80800000000000000
+      internalID: -8096184859128233374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_54
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 106
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2487bc6c0325192b0800000000000000
+      internalID: -5579588093888202686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_55
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 106
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e49048cfb372cce0800000000000000
+      internalID: -1386418467741068057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_56
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 106
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d098f0eaaba3742f0800000000000000
+      internalID: -988757019725952755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_57
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 106
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 871962ff8f6e5e960800000000000000
+      internalID: 7630759100756169080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_58
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 106
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 161e38ccaaf8b25b0800000000000000
+      internalID: -5392058165107629727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_59
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 106
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88907ab5d39892af0800000000000000
+      internalID: -420654193558746744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_60
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 106
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b90a0c3a63eed1d0800000000000000
+      internalID: -3323969429539518023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_61
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 56
+        width: 43
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2ccd813ac1381e0800000000000000
+      internalID: -2196880706404302169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_62
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 51
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9026ed7e3be233ca0800000000000000
+      internalID: -6038431325149568503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_63
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 56
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03705265feab39250800000000000000
+      internalID: 5950305069791774512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_64
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 75
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085a50a78c209f260800000000000000
+      internalID: 7131734544981796224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_65
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 52
+        width: 38
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907a944dda891d4d0800000000000000
+      internalID: -3111537995177941239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_66
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 48
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c2cd99159995a20800000000000000
+      internalID: 3051638798272965785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_67
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 48
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0ef747951bc1970800000000000000
+      internalID: 8727045175701921968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_68
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 52
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2020776b123709ac0800000000000000
+      internalID: -3850451092769406462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_69
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 47
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d905d68d22b8350800000000000000
+      internalID: 6019943639853079816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_70
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 42
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6bf9ca1e2e65c090800000000000000
+      internalID: -8014878817538933905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_71
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 74
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb8f6d355d470260800000000000000
+      internalID: 7063699569052191717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_72
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 68
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d3a965d28a41090800000000000000
+      internalID: -8064636120033772270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_73
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 42
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763cb1a014beca1c0800000000000000
+      internalID: -4490956063820233881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_74
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 60
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ea5515407015b20800000000000000
+      internalID: 3121283731870297708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_75
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 53
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff856ed61d7288a0800000000000000
+      internalID: -6304338991191322631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_76
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 46
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0610a6271f6a5d8c0800000000000000
+      internalID: -3975087540147715744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_77
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 0
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e663b27260768ede0800000000000000
+      internalID: -1303678815999150482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_78
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 0
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe0d414761197ca0800000000000000
+      internalID: -6018760291829084420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_79
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 5
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f904fff443e9db090800000000000000
+      internalID: -8017077814131998561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_80
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 3
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3d521dfdd705590800000000000000
+      internalID: -7687506163681340498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_81
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 14
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca62a8339063eb40800000000000000
+      internalID: 5468320557984541382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_82
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 0
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1550c488a4c4be10800000000000000
+      internalID: 2212609545006503199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_83
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 0
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f494fb15d6420b120800000000000000
+      internalID: 2427480251094223183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_84
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 0
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca09f3692c1da0e0800000000000000
+      internalID: -2257116874146247987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_85
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 3
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b8d9db51aa094a0800000000000000
+      internalID: -6588579244490781813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jax_86
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99aff653d220e8e30800000000000000
+      internalID: 4507542670237760153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jax_0: -3845293797539078763
+      Jax_1: 8765864386789032218
+      Jax_10: 1084536141960685383
+      Jax_11: -500265946317772075
+      Jax_12: -6358868219037714611
+      Jax_13: 1424615079664702581
+      Jax_14: -3018778158559482459
+      Jax_15: -1131283768933359918
+      Jax_16: 2671287964810072580
+      Jax_17: 4000222595132407918
+      Jax_18: -2028527174585761981
+      Jax_19: 6179086591467409073
+      Jax_2: -2135987704986674990
+      Jax_20: 590536656903821241
+      Jax_21: -2090855247149254973
+      Jax_22: -1834813007566712702
+      Jax_23: -7187272247887628215
+      Jax_24: -6186103159419784818
+      Jax_25: -4520558108251464585
+      Jax_26: -2061415630225130872
+      Jax_27: -7563251487831693214
+      Jax_28: -1746449157168995861
+      Jax_29: 7309090532724378778
+      Jax_3: -1685143236319190572
+      Jax_30: 7249989543873345155
+      Jax_31: -3983031474006401863
+      Jax_32: 7908694130594770778
+      Jax_33: 6372144368724207665
+      Jax_34: 4306413533503027467
+      Jax_35: -5282191501764892512
+      Jax_36: 8134329830105157727
+      Jax_37: -2066398323689473249
+      Jax_38: 108893839912842928
+      Jax_39: 5774696657162370024
+      Jax_4: -2638015319465433205
+      Jax_40: 7218142104216952387
+      Jax_41: -4073001862688664234
+      Jax_42: -3263123918333100811
+      Jax_43: -3559634632217968605
+      Jax_44: -665716124026974397
+      Jax_45: -4662390261544318539
+      Jax_46: -589452142764626753
+      Jax_47: 5346799541403901627
+      Jax_48: -2656180887896109039
+      Jax_49: 3856711048065930245
+      Jax_5: 5028778672868932224
+      Jax_50: 2938968220437140881
+      Jax_51: 1122290484954114817
+      Jax_52: -2648531266403813556
+      Jax_53: -8096184859128233374
+      Jax_54: -5579588093888202686
+      Jax_55: -1386418467741068057
+      Jax_56: -988757019725952755
+      Jax_57: 7630759100756169080
+      Jax_58: -5392058165107629727
+      Jax_59: -420654193558746744
+      Jax_6: 2854690644139575486
+      Jax_60: -3323969429539518023
+      Jax_61: -2196880706404302169
+      Jax_62: -6038431325149568503
+      Jax_63: 5950305069791774512
+      Jax_64: 7131734544981796224
+      Jax_65: -3111537995177941239
+      Jax_66: 3051638798272965785
+      Jax_67: 8727045175701921968
+      Jax_68: -3850451092769406462
+      Jax_69: 6019943639853079816
+      Jax_7: 161453176704884681
+      Jax_70: -8014878817538933905
+      Jax_71: 7063699569052191717
+      Jax_72: -8064636120033772270
+      Jax_73: -4490956063820233881
+      Jax_74: 3121283731870297708
+      Jax_75: -6304338991191322631
+      Jax_76: -3975087540147715744
+      Jax_77: -1303678815999150482
+      Jax_78: -6018760291829084420
+      Jax_79: -8017077814131998561
+      Jax_8: -5359093658899378585
+      Jax_80: -7687506163681340498
+      Jax_81: 5468320557984541382
+      Jax_82: 2212609545006503199
+      Jax_83: 2427480251094223183
+      Jax_84: -2257116874146247987
+      Jax_85: -6588579244490781813
+      Jax_86: 4507542670237760153
+      Jax_9: -9009661359723106244
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
