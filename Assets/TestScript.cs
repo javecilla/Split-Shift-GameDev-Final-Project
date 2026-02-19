@@ -16,5 +16,17 @@ public class TestScript : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
 
         rb.linearVelocity = new Vector2(moveHorizontal * movementSpeed, moveVertical * movementSpeed);
+
+        //jump
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+        }
+
+        //double jump
+        if (Input.GetKeyDown(KeyCode.Space) && rb.linearVelocity.y == 0)
+        {
+            rb.AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+        }
     }
 }
