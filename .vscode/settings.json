@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Split-Shift-GameDev-Final-Project.slnx",
+    "dotnet.defaultSolution": "Split Shift FINAL PROJECT.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
