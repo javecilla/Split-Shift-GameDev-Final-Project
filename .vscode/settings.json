@@ -60,13 +60,13 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
-        "*.unity": "yaml",
+        "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Split Shift FINAL PROJECT.slnx",
+    "dotnet.defaultSolution": "Split-Shift-GameDev-Final-Project.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
