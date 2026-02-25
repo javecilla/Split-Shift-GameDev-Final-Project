@@ -56,6 +56,9 @@ TagManager:
   - name: 5Building
     uniqueID: 1215351713
     locked: 0
+  - name: Backdrop
+    uniqueID: 3225581679
+    locked: 0
   - name: Player
     uniqueID: 1206686855
     locked: 0
@@ -67,6 +70,9 @@ TagManager:
     locked: 0
   - name: Interactable
     uniqueID: 4256010297
+    locked: 0
+  - name: Enemies
+    uniqueID: 4152098805
     locked: 0
   m_RenderingLayers:
   - Default
