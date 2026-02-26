@@ -532,10 +532,10 @@ TextureImporter:
       name: Jax_6
       rect:
         serializedVersion: 2
-        x: 17
-        y: 529
-        width: 58
-        height: 64
+        x: 33
+        y: 546
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,10 +554,10 @@ TextureImporter:
       name: Jax_7
       rect:
         serializedVersion: 2
-        x: 78
-        y: 542
-        width: 38
-        height: 49
+        x: 79
+        y: 546
+        width: 36
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,10 +576,10 @@ TextureImporter:
       name: Jax_8
       rect:
         serializedVersion: 2
-        x: 126
-        y: 545
-        width: 39
-        height: 42
+        x: 127
+        y: 546
+        width: 29
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,10 +598,10 @@ TextureImporter:
       name: Jax_9
       rect:
         serializedVersion: 2
-        x: 170
-        y: 545
-        width: 33
-        height: 49
+        x: 171
+        y: 547
+        width: 31
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,10 +620,10 @@ TextureImporter:
       name: Jax_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 477
-        width: 67
-        height: 49
+        x: 32
+        y: 479
+        width: 34
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 31, y: 0, z: 0, w: 0}
@@ -642,10 +642,10 @@ TextureImporter:
       name: Jax_11
       rect:
         serializedVersion: 2
-        x: 73
-        y: 471
-        width: 40
-        height: 53
+        x: 74
+        y: 479
+        width: 36
+        height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,10 +664,10 @@ TextureImporter:
       name: Jax_12
       rect:
         serializedVersion: 2
-        x: 122
-        y: 491
-        width: 56
-        height: 28
+        x: 123
+        y: 492
+        width: 54
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -686,10 +686,10 @@ TextureImporter:
       name: Jax_13
       rect:
         serializedVersion: 2
-        x: 182
-        y: 478
-        width: 41
-        height: 40
+        x: 183
+        y: 479
+        width: 39
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,10 +708,10 @@ TextureImporter:
       name: Jax_14
       rect:
         serializedVersion: 2
-        x: 226
-        y: 478
-        width: 53
-        height: 16
+        x: 227
+        y: 479
+        width: 51
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -884,13 +884,13 @@ TextureImporter:
       name: Jax_22
       rect:
         serializedVersion: 2
-        x: 4
-        y: 301
-        width: 65
-        height: 62
+        x: 30
+        y: 320
+        width: 37
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 19, z: 2, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -906,13 +906,13 @@ TextureImporter:
       name: Jax_23
       rect:
         serializedVersion: 2
-        x: 71
-        y: 311
-        width: 55
-        height: 48
+        x: 75
+        y: 320
+        width: 50
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 9, z: 0, w: 1}
       customData: 
       outline: []
       physicsShape: []
@@ -928,10 +928,10 @@ TextureImporter:
       name: Jax_24
       rect:
         serializedVersion: 2
-        x: 130
-        y: 319
-        width: 47
-        height: 41
+        x: 131
+        y: 320
+        width: 45
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -950,10 +950,10 @@ TextureImporter:
       name: Jax_25
       rect:
         serializedVersion: 2
-        x: 178
-        y: 319
-        width: 46
-        height: 44
+        x: 179
+        y: 320
+        width: 45
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -972,10 +972,10 @@ TextureImporter:
       name: Jax_26
       rect:
         serializedVersion: 2
-        x: 223
-        y: 319
-        width: 48
-        height: 44
+        x: 224
+        y: 321
+        width: 46
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -994,10 +994,10 @@ TextureImporter:
       name: Jax_27
       rect:
         serializedVersion: 2
-        x: 273
-        y: 319
-        width: 58
-        height: 42
+        x: 274
+        y: 320
+        width: 56
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1016,10 +1016,10 @@ TextureImporter:
       name: Jax_28
       rect:
         serializedVersion: 2
-        x: 329
-        y: 319
-        width: 53
-        height: 42
+        x: 330
+        y: 320
+        width: 51
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1038,10 +1038,10 @@ TextureImporter:
       name: Jax_29
       rect:
         serializedVersion: 2
-        x: 385
-        y: 319
-        width: 37
-        height: 45
+        x: 386
+        y: 320
+        width: 35
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,10 +1060,10 @@ TextureImporter:
       name: Jax_30
       rect:
         serializedVersion: 2
-        x: 434
-        y: 319
-        width: 29
-        height: 58
+        x: 435
+        y: 320
+        width: 27
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1082,10 +1082,10 @@ TextureImporter:
       name: Jax_31
       rect:
         serializedVersion: 2
-        x: 472
-        y: 319
-        width: 34
-        height: 49
+        x: 473
+        y: 320
+        width: 32
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1104,10 +1104,10 @@ TextureImporter:
       name: Jax_32
       rect:
         serializedVersion: 2
-        x: 514
-        y: 319
-        width: 56
-        height: 61
+        x: 515
+        y: 320
+        width: 54
+        height: 59
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1126,10 +1126,10 @@ TextureImporter:
       name: Jax_33
       rect:
         serializedVersion: 2
-        x: 568
-        y: 319
-        width: 40
-        height: 38
+        x: 569
+        y: 320
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1148,10 +1148,10 @@ TextureImporter:
       name: Jax_34
       rect:
         serializedVersion: 2
-        x: 610
-        y: 319
-        width: 33
-        height: 37
+        x: 611
+        y: 320
+        width: 31
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1170,10 +1170,10 @@ TextureImporter:
       name: Jax_35
       rect:
         serializedVersion: 2
-        x: 653
-        y: 319
-        width: 38
-        height: 39
+        x: 654
+        y: 320
+        width: 37
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1456,10 +1456,10 @@ TextureImporter:
       name: Jax_48
       rect:
         serializedVersion: 2
-        x: 27
-        y: 106
-        width: 42
-        height: 57
+        x: 30
+        y: 107
+        width: 38
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1478,10 +1478,10 @@ TextureImporter:
       name: Jax_49
       rect:
         serializedVersion: 2
-        x: 72
-        y: 82
-        width: 43
-        height: 72
+        x: 77
+        y: 107
+        width: 33
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1500,10 +1500,10 @@ TextureImporter:
       name: Jax_50
       rect:
         serializedVersion: 2
-        x: 114
-        y: 92
-        width: 40
-        height: 54
+        x: 120
+        y: 107
+        width: 33
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1522,10 +1522,10 @@ TextureImporter:
       name: Jax_51
       rect:
         serializedVersion: 2
-        x: 160
-        y: 106
-        width: 40
-        height: 43
+        x: 161
+        y: 107
+        width: 38
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1544,10 +1544,10 @@ TextureImporter:
       name: Jax_52
       rect:
         serializedVersion: 2
-        x: 208
-        y: 106
-        width: 45
-        height: 43
+        x: 209
+        y: 107
+        width: 43
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1566,10 +1566,10 @@ TextureImporter:
       name: Jax_53
       rect:
         serializedVersion: 2
-        x: 259
-        y: 106
-        width: 43
-        height: 43
+        x: 260
+        y: 107
+        width: 41
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1588,10 +1588,10 @@ TextureImporter:
       name: Jax_54
       rect:
         serializedVersion: 2
-        x: 311
-        y: 106
-        width: 47
-        height: 43
+        x: 312
+        y: 107
+        width: 45
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1610,10 +1610,10 @@ TextureImporter:
       name: Jax_55
       rect:
         serializedVersion: 2
-        x: 364
-        y: 106
-        width: 43
-        height: 43
+        x: 365
+        y: 107
+        width: 41
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1632,10 +1632,10 @@ TextureImporter:
       name: Jax_56
       rect:
         serializedVersion: 2
-        x: 420
-        y: 106
-        width: 45
-        height: 43
+        x: 421
+        y: 107
+        width: 43
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1654,10 +1654,10 @@ TextureImporter:
       name: Jax_57
       rect:
         serializedVersion: 2
-        x: 474
-        y: 106
-        width: 34
-        height: 42
+        x: 475
+        y: 107
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1676,10 +1676,10 @@ TextureImporter:
       name: Jax_58
       rect:
         serializedVersion: 2
-        x: 521
-        y: 106
-        width: 34
-        height: 42
+        x: 522
+        y: 107
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1698,10 +1698,10 @@ TextureImporter:
       name: Jax_59
       rect:
         serializedVersion: 2
-        x: 567
-        y: 106
-        width: 35
-        height: 42
+        x: 568
+        y: 107
+        width: 33
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1720,10 +1720,10 @@ TextureImporter:
       name: Jax_60
       rect:
         serializedVersion: 2
-        x: 618
-        y: 106
-        width: 41
-        height: 41
+        x: 619
+        y: 107
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1764,10 +1764,10 @@ TextureImporter:
       name: Jax_62
       rect:
         serializedVersion: 2
-        x: 302
-        y: 51
-        width: 29
-        height: 33
+        x: 303
+        y: 52
+        width: 27
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1787,9 +1787,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 334
-        y: 56
+        y: 52
         width: 32
-        height: 22
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1800,28 +1800,6 @@ TextureImporter:
       bones: []
       spriteID: 03705265feab39250800000000000000
       internalID: 5950305069791774512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jax_64
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 75
-        width: 16
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 085a50a78c209f260800000000000000
-      internalID: 7131734544981796224
       vertices: []
       indices: 
       edges: []
@@ -2042,28 +2020,6 @@ TextureImporter:
       bones: []
       spriteID: c6ea5515407015b20800000000000000
       internalID: 3121283731870297708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jax_75
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 53
-        width: 16
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ff856ed61d7288a0800000000000000
-      internalID: -6304338991191322631
       vertices: []
       indices: 
       edges: []

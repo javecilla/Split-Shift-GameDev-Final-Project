@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class TestScriptwAnimation : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class TestScriptwAnimation : MonoBehaviour
     float dashTimer = 0f;
     float dashCooldownTimer = 0f;
 
+    bool isAttacking = false;
+
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -33,10 +37,25 @@ public class TestScriptwAnimation : MonoBehaviour
 
     void Update()
     {
+        // Start attack while holding
+        if (UnityEngine.Input.GetMouseButton(0) && !isAttacking)
+        {
+            isAttacking = true;
+            animator.SetTrigger("Attack");
+        }
+
+        // Stop attack when released
+        if (UnityEngine.Input.GetMouseButtonUp(0))
+        {
+            isAttacking = false;
+            animator.Play("Movement");
+        }
+
+
         // Don't allow movement input while dashing
         if (isDashing) return;
 
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = UnityEngine.Input.GetAxis("Horizontal");
         FlipSprite();
         HandleJump();
         HandleDash();
@@ -46,6 +65,7 @@ public class TestScriptwAnimation : MonoBehaviour
     {
         // Don't override velocity while dashing
         if (isDashing) return;
+        if (isAttacking) return;
 
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
         animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
@@ -54,7 +74,7 @@ public class TestScriptwAnimation : MonoBehaviour
 
     void HandleJump()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (UnityEngine.Input.GetButtonDown("Jump"))
         {
             if (isGrounded)
             {
@@ -85,7 +105,7 @@ public class TestScriptwAnimation : MonoBehaviour
         }
 
         // Trigger dash with Left Shift
-        if (Input.GetMouseButton(1) && canDash)
+        if (UnityEngine.Input.GetMouseButton(1) && canDash)
         {
             StartCoroutine(PerformDash());
         }
@@ -136,6 +156,11 @@ public class TestScriptwAnimation : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    public void EndAttack()
+    {
+        isAttacking = false;
     }
 
 }
