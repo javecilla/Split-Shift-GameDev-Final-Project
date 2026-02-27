@@ -317,7 +317,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25865158, g: 0.6226415, b: 0.1967782, a: 1}
@@ -482,7 +482,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25865158, g: 0.6226415, b: 0.1967782, a: 1}
@@ -1482,7 +1482,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 152587225
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -27684,7 +27684,8 @@ Transform:
   m_LocalPosition: {x: -9.3, y: -7.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1369201983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &352683177
@@ -27893,6 +27894,8 @@ MonoBehaviour:
   jumpPower: 10
   isGrounded: 0
   dashDuration: 0.2
+  ProjectilePrefab: {fileID: 5898824374859795067, guid: 4970970a97afcef4ea75241a00c6e12d, type: 3}
+  LaunchOffset: {fileID: 1369201983}
 --- !u!1 &503795759
 GameObject:
   m_ObjectHideFlags: 0
@@ -27906,7 +27909,7 @@ GameObject:
   - component: {fileID: 503795761}
   - component: {fileID: 503795760}
   m_Layer: 0
-  m_Name: Melee Enemy 2
+  m_Name: Enemy 1 - Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28030,7 +28033,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.5943396, g: 0.058873262, b: 0.058873262, a: 1}
@@ -39716,7 +39719,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 152587225
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -55603,7 +55606,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000c1efb58e53ef134b692cfa5cb91256cca1cb70488794ec47d94b18099583336c3990adfdf5ff7bf76f7842c0
+  m_ApplyToSortingLayers: 00000000c1efb58e53ef134b692cfa5cb91256cca1cb70488794ec47d94b18099583336c3990adfdf5ff7bf76f7842c0dbb6b448
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -55879,7 +55882,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -38956999
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -56521,7 +56524,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25865158, g: 0.6226415, b: 0.1967782, a: 1}
@@ -56548,6 +56551,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1369201982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369201983}
+  m_Layer: 0
+  m_Name: LaunchOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1369201983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369201982}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.772, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 352683175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454281699
 GameObject:
@@ -56686,7 +56720,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25865158, g: 0.6226415, b: 0.1967782, a: 1}
@@ -56726,8 +56760,9 @@ GameObject:
   - component: {fileID: 1532641887}
   - component: {fileID: 1532641886}
   - component: {fileID: 1532641885}
+  - component: {fileID: 1532641889}
   m_Layer: 0
-  m_Name: Melee Enemy 1
+  m_Name: Enemy 1 - Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56771,7 +56806,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.9375, y: 2.1875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -56851,10 +56886,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5943396, g: 0.058873262, b: 0.058873262, a: 1}
+  m_Sprite: {fileID: 407907198125173640, guid: 7b8c5400a467c43419b3a314f9e24f88, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -56873,12 +56908,34 @@ Transform:
   m_GameObject: {fileID: 1532641884}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 177.5, y: -8.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 178.11, y: -8.47, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1532641889
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532641884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 89393ac5a21f4484dad5cc53a32ff866, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1874019230
 GameObject:
   m_ObjectHideFlags: 0
@@ -57088,7 +57145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25865158, g: 0.6226415, b: 0.1967782, a: 1}
@@ -57253,7 +57310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 11
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.25865158, g: 0.6226415, b: 0.1967782, a: 1}
