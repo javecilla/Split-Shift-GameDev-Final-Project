@@ -11,16 +11,25 @@ public class TestScriptwAnimation : MonoBehaviour
     [Header("Jump")]
     public float jumpPower = 6f;
     public bool isGrounded = false;
-    bool canDoubleJump = false;      // tracks if double jump is available
+    bool canDoubleJump = false;
 
     [Header("Dash")]
-    float dashSpeed = 15f;           // how fast the dash is
-    public float dashDuration = 0.2f;       // how long the dash lasts in seconds
-    float dashCooldown = 1f;         // seconds before you can dash again
+    float dashSpeed = 15f;
+    public float dashDuration = 0.2f;
+    float dashCooldown = 1f;
     bool isDashing = false;
     bool canDash = true;
-    float dashTimer = 0f;
     float dashCooldownTimer = 0f;
+
+    [Header("Attack")]
+    bool isAttacking = false;
+
+    [Header("Ranged Attack")]
+    bool isRangedAttacking = false;
+
+    [Header("Projectile")]
+    public ProjectileBehavior ProjectilePrefab;
+    public Transform LaunchOffset;
 
     Rigidbody2D rb;
     Animator animator;
@@ -33,7 +42,34 @@ public class TestScriptwAnimation : MonoBehaviour
 
     void Update()
     {
-        // Don't allow movement input while dashing
+        // Attack animation
+        if (Input.GetMouseButton(0) && !isAttacking)
+        {
+            isAttacking = true;
+            animator.SetTrigger("Attack");
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            isAttacking = false;
+            animator.Play("Movement");
+        }
+
+        /// Ranged attack input (Right Mouse Button)
+        if (Input.GetMouseButtonDown(1) && !isAttacking && !isRangedAttacking)
+        {
+            FireProjectile();
+            isRangedAttacking = true;
+            animator.SetTrigger("RangedAttack");
+        }
+
+        if (isRangedAttacking && animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
+        {
+            isRangedAttacking = false;
+        }
+
+
+
         if (isDashing) return;
 
         horizontalInput = Input.GetAxis("Horizontal");
@@ -44,12 +80,25 @@ public class TestScriptwAnimation : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Don't override velocity while dashing
         if (isDashing) return;
+        if (isAttacking) return;
+        if (isRangedAttacking) return;
 
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
         animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
         animator.SetFloat("yVelocity", rb.linearVelocity.y);
+    }
+
+    void FireProjectile()
+    {
+        var proj = Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
+        proj.direction = isFacingRight ? Vector2.right : Vector2.left;
+
+        // Flip the projectile sprite visually
+        if (!isFacingRight)
+        {
+            proj.transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     void HandleJump()
@@ -58,17 +107,15 @@ public class TestScriptwAnimation : MonoBehaviour
         {
             if (isGrounded)
             {
-                // Normal jump
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                 isGrounded = false;
-                canDoubleJump = true;           // enable double jump after first jump
+                canDoubleJump = true;
                 animator.SetBool("isJumping", true);
             }
             else if (canDoubleJump)
             {
-                // Double jump
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
-                canDoubleJump = false;          // consume the double jump
+                canDoubleJump = false;
                 animator.SetBool("isJumping", true);
             }
         }
@@ -76,7 +123,6 @@ public class TestScriptwAnimation : MonoBehaviour
 
     void HandleDash()
     {
-        // Count down the cooldown
         if (!canDash)
         {
             dashCooldownTimer -= Time.deltaTime;
@@ -84,8 +130,7 @@ public class TestScriptwAnimation : MonoBehaviour
                 canDash = true;
         }
 
-        // Trigger dash with Left Shift
-        if (Input.GetMouseButton(1) && canDash)
+        if (Input.GetKeyDown(KeyCode.CapsLock) && canDash)
         {
             StartCoroutine(PerformDash());
         }
@@ -97,10 +142,9 @@ public class TestScriptwAnimation : MonoBehaviour
         canDash = false;
         dashCooldownTimer = dashCooldown;
 
-        // Determine dash direction (use facing direction if no input)
         float dashDirection = horizontalInput != 0 ? Mathf.Sign(horizontalInput) : (isFacingRight ? 1f : -1f);
 
-        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);  // zero Y for a clean horizontal dash
+        rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
         animator.SetBool("isDashing", true);
 
         yield return new WaitForSeconds(dashDuration);
@@ -136,6 +180,15 @@ public class TestScriptwAnimation : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    public void EndAttack()
+    {
+        isAttacking = false;
+    }
+    public void EndRangedAttack()
+    {
+        isRangedAttacking = false;
     }
 
 }
