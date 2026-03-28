@@ -9,7 +9,7 @@ _Goal: Set up the Unity project, Git repository, and gather initial assets so co
 | Task                           | Assigned To | Priority | Due Date     | Remarks  |
 | :----------------------------- | :---------- | :------- | :----------- | :------- |
 | **Unity Project & Git Repo Setup** | Jerome | **High** | N/A | **Done** |
-| **Asset List & Sprite Style Guide** | Francis | **High** | N/A | **To Do** |
+| **Asset List & Sprite Style Guide** | Francis | **High** | N/A | **Done** |
 | **Draft Level 1 Layout (Paper/Greybox)** | Rensen | Medium | N/A | **To Do** |
 | **GDD Finalization (Mechanics Rules)** | Francis | Medium | N/A | **To Do** |
 | **QA - Create Bug Report Template** | Giga | Low | N/A | **To Do** |

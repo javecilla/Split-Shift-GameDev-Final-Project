@@ -2,8 +2,9 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -41,3 +42,41 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1Background
+    uniqueID: 2394288065
+    locked: 0
+  - name: 2Building
+    uniqueID: 1259597651
+    locked: 0
+  - name: 3Building
+    uniqueID: 1559899241
+    locked: 0
+  - name: 4Building
+    uniqueID: 3428192953
+    locked: 0
+  - name: 5Building
+    uniqueID: 1215351713
+    locked: 0
+  - name: Backdrop
+    uniqueID: 3225581679
+    locked: 0
+  - name: Player
+    uniqueID: 1206686855
+    locked: 0
+  - name: Projectile
+    uniqueID: 1219802843
+    locked: 0
+  - name: Platform
+    uniqueID: 152587225
+    locked: 0
+  - name: Wall
+    uniqueID: 1815315349
+    locked: 0
+  - name: Interactable
+    uniqueID: 4256010297
+    locked: 0
+  - name: Enemies
+    uniqueID: 4152098805
+    locked: 0
+  m_RenderingLayers:
+  - Default
