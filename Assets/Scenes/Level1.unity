@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 252751338}
   - component: {fileID: 252751337}
   - component: {fileID: 252751336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -56385,6 +56385,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632726a09b9bce843a2be4e2a6df47e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy1Behavior
+  moveSpeed: 2.5
+  patrolDistance: 6
+  pauseTime: 3
+  visionDistance: 6
+  attackRange: 1.5
+  normalAttackDamage: 10
+  chargedAttackDamage: 25
+  attackCooldown: 2
+  chaseSpeedMultiplier: 2
+  player: {fileID: 352683175}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1874019230
 GameObject:
   m_ObjectHideFlags: 0
@@ -56799,6 +56815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 653340460798043916, guid: e389fce5a74904b41a478de6a15a7516, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3615971008049953262, guid: e389fce5a74904b41a478de6a15a7516, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.65
@@ -56839,6 +56859,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9071482308549547883, guid: e389fce5a74904b41a478de6a15a7516, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56855,6 +56879,10 @@ PrefabInstance:
     - target: {fileID: 2943837373214409420, guid: 90a258b8558fef64796eaf8d37e96484, type: 3}
       propertyPath: m_Name
       value: Enemy 1 - Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250180041382145304, guid: 90a258b8558fef64796eaf8d37e96484, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7250180041382145304, guid: 90a258b8558fef64796eaf8d37e96484, type: 3}
       propertyPath: m_LocalPosition.x

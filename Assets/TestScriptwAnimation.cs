@@ -33,6 +33,7 @@ public class TestScriptwAnimation : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    public float PlayerHealth = 100f;
 
     void Start()
     {
@@ -189,6 +190,20 @@ public class TestScriptwAnimation : MonoBehaviour
     public void EndRangedAttack()
     {
         isRangedAttacking = false;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        PlayerHealth -= damage;
+
+        Debug.Log("Player took damage: " + damage);
+        Debug.Log("Remaining health: " + PlayerHealth);
+
+        if (PlayerHealth <= 0)
+        {
+            Debug.Log("Player died");
+            // death logic
+        }
     }
 
 }
