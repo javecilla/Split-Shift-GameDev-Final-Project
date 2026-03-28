@@ -1,63 +1,52 @@
-// Enemy1Behavior.cs
+// base class (shared logic: patrol, chase, flip, take damage)
 using UnityEngine;
 
-public class Enemy1Behavior : MonoBehaviour
+public abstract class EnemyBase : MonoBehaviour
 {
-
-    /*
-    public void NormalAttackDamage()
-    {
-        // need lng maaccess method na to para sa event frame sa animation
-        }
-
-    public void ChargedAttackDamage()
-    {
-        // need lng maaccess method na to para sa event frame sa animation
-    }
-    */
+    [Header("Patrol")]
     public float moveSpeed = 4f;
     public float patrolDistance = 4f;
     public float pauseTime = 2f;
 
+    [Header("Detection")]
     public float visionDistance = 6f;
     public float attackRange = 1.5f;
-    public float normalAttackDamage = 10f;
-    public float chargedAttackDamage = 25f;
-    public float attackCooldown = 1f;
     public float chaseSpeedMultiplier = 2.5f;
 
-    // public Transform player;
+    [Header("Attack")]
+    public float normalAttackDamage = 10f;
+    public float attackCooldown = 1f;
+
+    [Header("Layers")]
     public LayerMask playerLayer;
     public LayerMask groundLayer;
 
-    private Rigidbody2D rb;
-    private Vector2 startPos;
-    private bool movingRight = true;
-    private bool isPaused = false;
-    private float pauseCounter;
+    protected Rigidbody2D rb;
+    protected Animator animator;
+    protected Vector2 startPos;
+    protected bool movingRight = true;
+    protected bool isPaused = false;
+    protected float pauseCounter;
+    protected float attackTimer = 0f;
 
-    private enum State { Patrol, Chase, Attack }
-    private State currentState;
+    protected enum State { Patrol, Chase, Attack }
+    protected State currentState;
 
-    private float attackTimer = 0f;
+    protected Transform Player => PlayerManager.Instance.CurrentPlayer;
 
-    Transform Player => PlayerManager.Instance.CurrentPlayer;
-
-
-    void Start()
+    protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         startPos = transform.position;
         currentState = State.Patrol;
     }
 
-    void Update()
+    protected virtual void Update()
     {
-
         if (PlayerManager.Instance == null || PlayerManager.Instance.CurrentPlayer == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
-
 
         if (CanSeePlayer())
         {
@@ -72,25 +61,18 @@ public class Enemy1Behavior : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         switch (currentState)
         {
-            case State.Patrol:
-                Patrol();
-                break;
-            case State.Chase:
-                Chase();
-                break;
-            case State.Attack:
-                Attack();
-                break;
+            case State.Patrol: Patrol(); break;
+            case State.Chase:  Chase();  break;
+            case State.Attack: Attack(); break;
         }
     }
 
-    void Patrol()
+    protected virtual void Patrol()
     {
-        // Pause handling
         if (isPaused)
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
@@ -100,33 +82,28 @@ public class Enemy1Behavior : MonoBehaviour
             {
                 pauseCounter = 0f;
                 isPaused = false;
-
-                // After pause ends, flip to start walking in the new direction
                 movingRight = !movingRight;
                 Flip();
             }
             return;
         }
 
-        // Move in current direction
         float distanceFromStart = transform.position.x - startPos.x;
         float currentSpeed = movingRight ? moveSpeed : -moveSpeed;
         rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
 
-        // Start pause when reaching patrol limit
         if ((movingRight && distanceFromStart >= patrolDistance) ||
             (!movingRight && distanceFromStart <= -patrolDistance))
         {
-            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // stop immediately
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             isPaused = true;
             pauseCounter = 0f;
         }
     }
 
-    void Chase()
+    protected virtual void Chase()
     {
         Vector2 direction = (Player.position - transform.position).normalized;
-
         float currentSpeed = moveSpeed * chaseSpeedMultiplier;
         rb.linearVelocity = new Vector2(direction.x * currentSpeed, rb.linearVelocity.y);
 
@@ -137,34 +114,30 @@ public class Enemy1Behavior : MonoBehaviour
         }
     }
 
-    void Attack()
+    protected virtual void Attack()
     {
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); 
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         attackTimer += Time.deltaTime;
 
         if (attackTimer >= attackCooldown)
         {
             attackTimer = 0f;
-
-            NormalAttackDamage();
-
+            TriggerAttack();
         }
     }
 
-    public void NormalAttackDamage()
+    // Override this per enemy to define attack logic
+    protected abstract void TriggerAttack();
+
+    // Called via animation event frame
+    public virtual void NormalAttackDamage()
     {
+        if (PlayerManager.Instance == null || Player == null) return;
         Debug.Log("Normal Attack! Damage: " + normalAttackDamage);
-        Player.GetComponent<TestScriptwAnimation>().TakeDamage(normalAttackDamage);
+        Player.GetComponent<PlayerBehavior>().TakeDamage(normalAttackDamage);
     }
 
-    void ChargedAttack()
-    {
-        Debug.Log("Charged Attack! Damage: " + chargedAttackDamage);
-        Player.GetComponent<TestScriptwAnimation>().TakeDamage(chargedAttackDamage);
-    }
-
-
-    bool CanSeePlayer()
+    protected bool CanSeePlayer()
     {
         Vector2 direction = movingRight ? Vector2.right : Vector2.left;
 
@@ -184,7 +157,7 @@ public class Enemy1Behavior : MonoBehaviour
         return false;
     }
 
-    void Flip()
+    protected void Flip()
     {
         Vector3 scale = transform.localScale;
         scale.x *= -1;
@@ -197,6 +170,4 @@ public class Enemy1Behavior : MonoBehaviour
         Vector2 direction = movingRight ? Vector2.right : Vector2.left;
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)(direction * visionDistance));
     }
-
 }
-

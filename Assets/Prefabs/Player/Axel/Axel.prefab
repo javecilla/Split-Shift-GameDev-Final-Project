@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6694999791635205523}
   - component: {fileID: 5553461902307713143}
   - component: {fileID: 3395435312454780296}
-  - component: {fileID: 836552444202415576}
+  - component: {fileID: -8769394431606879524}
   m_Layer: 0
   m_Name: Axel
   m_TagString: Player
@@ -259,7 +259,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.000000052590334, y: -0.44115975}
   m_Size: {x: 0.93750036, y: 0.24005124}
   m_Direction: 1
---- !u!114 &836552444202415576
+--- !u!114 &-8769394431606879524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,12 +268,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8910076188111683666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de40b03162238a47b41d2f083b052cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 79a5a61f21a83bd49bbb8d689db642fb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TestScriptwAnimation
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBehavior
   moveSpeed: 8
-  jumpPower: 10
+  jumpPower: 6
   isGrounded: 0
+  dashSpeed: 15
   dashDuration: 0.2
-  ProjectilePrefab: {fileID: 5898824374859795067, guid: 4970970a97afcef4ea75241a00c6e12d, type: 3}
-  LaunchOffset: {fileID: 465672027234158238}
+  ProjectilePrefab: {fileID: 0}
+  LaunchOffset: {fileID: 0}
+  PlayerHealth: 100

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1034088796256068598}
   - component: {fileID: 6361047600870999718}
   - component: {fileID: 8741232153241929432}
+  - component: {fileID: -1635381535174406739}
   m_Layer: 0
   m_Name: Enemy 1 - Dog
   m_TagString: Untagged
@@ -188,3 +189,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1635381535174406739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943837373214409420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3474e1a0bc3ae540ab244bc9dc419de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DogBehavior
+  moveSpeed: 4
+  patrolDistance: 4
+  pauseTime: 2
+  visionDistance: 6
+  attackRange: 1.5
+  chaseSpeedMultiplier: 2.5
+  normalAttackDamage: 10
+  attackCooldown: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  chargedAttackDamage: 25
+  chargedAttackCooldown: 4
