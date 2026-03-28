@@ -21,9 +21,6 @@ public class TestScriptwAnimation : MonoBehaviour
     bool canDash = true;
     float dashCooldownTimer = 0f;
 
-    [Header("Attack")]
-    bool isAttacking = false;
-
     [Header("Ranged Attack")]
     bool isRangedAttacking = false;
 
@@ -42,21 +39,45 @@ public class TestScriptwAnimation : MonoBehaviour
 
     void Update()
     {
-        // Attack animation
-        if (Input.GetMouseButton(0) && !isAttacking)
-        {
-            isAttacking = true;
-            animator.SetTrigger("Attack");
-        }
+        HandleAttack();
+        HandleRangedAttack();
+        HandleDash();
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            isAttacking = false;
-            animator.Play("Movement");
-        }
+        if (isDashing) return;
 
-        /// Ranged attack input (Right Mouse Button)
-        if (Input.GetMouseButtonDown(1) && !isAttacking && !isRangedAttacking)
+        horizontalInput = Input.GetAxis("Horizontal");
+        FlipSprite();
+        HandleJump();
+    }
+
+    private void FixedUpdate()
+    {
+        if (isDashing) return;
+        if (isRangedAttacking) return;
+
+        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
+    }
+
+    // -------------------------
+    // ATTACK (uses "Attack 0")
+    // -------------------------
+    void HandleAttack()
+    {
+        // Every click sends the trigger, Animator handles combo (JaxAtk1 -> 2 -> 3)
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("Attack 0");
+        }
+    }
+
+    // -------------------------
+    // RANGED ATTACK
+    // -------------------------
+    void HandleRangedAttack()
+    {
+        if (Input.GetMouseButtonDown(1) && !isRangedAttacking)
         {
             FireProjectile();
             isRangedAttacking = true;
@@ -67,26 +88,6 @@ public class TestScriptwAnimation : MonoBehaviour
         {
             isRangedAttacking = false;
         }
-
-
-
-        if (isDashing) return;
-
-        horizontalInput = Input.GetAxis("Horizontal");
-        FlipSprite();
-        HandleJump();
-        HandleDash();
-    }
-
-    private void FixedUpdate()
-    {
-        if (isDashing) return;
-        if (isAttacking) return;
-        if (isRangedAttacking) return;
-
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
-        animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
-        animator.SetFloat("yVelocity", rb.linearVelocity.y);
     }
 
     void FireProjectile()
@@ -94,13 +95,13 @@ public class TestScriptwAnimation : MonoBehaviour
         var proj = Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
         proj.direction = isFacingRight ? Vector2.right : Vector2.left;
 
-        // Flip the projectile sprite visually
         if (!isFacingRight)
-        {
             proj.transform.localScale = new Vector3(-1, 1, 1);
-        }
     }
 
+    // -------------------------
+    // JUMP
+    // -------------------------
     void HandleJump()
     {
         if (Input.GetButtonDown("Jump"))
@@ -121,6 +122,9 @@ public class TestScriptwAnimation : MonoBehaviour
         }
     }
 
+    // -------------------------
+    // DASH
+    // -------------------------
     void HandleDash()
     {
         if (!canDash)
@@ -132,6 +136,7 @@ public class TestScriptwAnimation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.CapsLock) && canDash)
         {
+            animator.SetBool("isJumping", false);
             StartCoroutine(PerformDash());
         }
     }
@@ -151,8 +156,14 @@ public class TestScriptwAnimation : MonoBehaviour
 
         isDashing = false;
         animator.SetBool("isDashing", false);
+
+        if (!isGrounded)
+            animator.SetBool("isJumping", true);
     }
 
+    // -------------------------
+    // UTILITIES
+    // -------------------------
     void FlipSprite()
     {
         if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
@@ -181,14 +192,4 @@ public class TestScriptwAnimation : MonoBehaviour
             isGrounded = false;
         }
     }
-
-    public void EndAttack()
-    {
-        isAttacking = false;
-    }
-    public void EndRangedAttack()
-    {
-        isRangedAttacking = false;
-    }
-
 }
