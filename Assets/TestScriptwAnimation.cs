@@ -55,7 +55,7 @@ public class TestScriptwAnimation : MonoBehaviour
             animator.Play("Movement");
         }
 
-        /// Ranged attack input (Right Mouse Button)
+        // Ranged attack
         if (Input.GetMouseButtonDown(1) && !isAttacking && !isRangedAttacking)
         {
             FireProjectile();
@@ -68,14 +68,14 @@ public class TestScriptwAnimation : MonoBehaviour
             isRangedAttacking = false;
         }
 
-
+        // Always handle dash input first — dash can cancel jump
+        HandleDash();
 
         if (isDashing) return;
 
         horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
         HandleJump();
-        HandleDash();
     }
 
     private void FixedUpdate()
@@ -94,11 +94,8 @@ public class TestScriptwAnimation : MonoBehaviour
         var proj = Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
         proj.direction = isFacingRight ? Vector2.right : Vector2.left;
 
-        // Flip the projectile sprite visually
         if (!isFacingRight)
-        {
             proj.transform.localScale = new Vector3(-1, 1, 1);
-        }
     }
 
     void HandleJump()
@@ -132,6 +129,8 @@ public class TestScriptwAnimation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.CapsLock) && canDash)
         {
+            // Cancel jump state when dashing
+            animator.SetBool("isJumping", false);
             StartCoroutine(PerformDash());
         }
     }
@@ -142,6 +141,7 @@ public class TestScriptwAnimation : MonoBehaviour
         canDash = false;
         dashCooldownTimer = dashCooldown;
 
+        // Use stored horizontalInput before the early return cuts it off
         float dashDirection = horizontalInput != 0 ? Mathf.Sign(horizontalInput) : (isFacingRight ? 1f : -1f);
 
         rb.linearVelocity = new Vector2(dashDirection * dashSpeed, 0f);
@@ -151,6 +151,10 @@ public class TestScriptwAnimation : MonoBehaviour
 
         isDashing = false;
         animator.SetBool("isDashing", false);
+
+        // Restore jump state if we're still airborne after the dash
+        if (!isGrounded)
+            animator.SetBool("isJumping", true);
     }
 
     void FlipSprite()
@@ -186,9 +190,9 @@ public class TestScriptwAnimation : MonoBehaviour
     {
         isAttacking = false;
     }
+
     public void EndRangedAttack()
     {
         isRangedAttacking = false;
     }
-
 }
