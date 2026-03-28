@@ -30,6 +30,7 @@ public class TestScriptwAnimation : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    public float PlayerHealth = 100f;
 
     void Start()
     {
