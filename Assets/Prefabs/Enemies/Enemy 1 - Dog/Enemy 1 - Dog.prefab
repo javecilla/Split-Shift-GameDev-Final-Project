@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8741232153241929432}
   - component: {fileID: -1635381535174406739}
   - component: {fileID: -5909789036981443390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 1 - Dog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ MonoBehaviour:
   visionDistance: 6
   attackRange: 2.5
   chaseSpeedMultiplier: 2.5
-  normalAttackDamage: 15
+  normalAttackDamage: 10
   attackCooldown: 1
   maxHealth: 100
   playerLayer:
