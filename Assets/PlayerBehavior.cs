@@ -86,7 +86,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (IsJax)
             {
-                animator.SetTrigger("Attack");
+                animator.SetTrigger("Attack 0");
             }
             else
             {

@@ -27382,6 +27382,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3615971008049953262, guid: e389fce5a74904b41a478de6a15a7516, type: 3}
   m_PrefabInstance: {fileID: 650500930790023202}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &357516315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 465672027234158238, guid: 3a694533aeef8294ab9cc7f4862079a3, type: 3}
+  m_PrefabInstance: {fileID: 4428413398400784684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &436950522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27471,7 +27476,10 @@ MonoBehaviour:
   CurrentPlayer: {fileID: 0}
   Jax: {fileID: 1851087257}
   Axel: {fileID: 707031090}
+  cameraObject: {fileID: 906769479}
   isJax: 1
+  PlayerHealth: 100
+  PlayerMana: 0
 --- !u!4 &510504508
 Transform:
   m_ObjectHideFlags: 0
@@ -55780,7 +55788,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 352683175}
+    TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -56218,6 +56226,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034340131222546788, guid: e389fce5a74904b41a478de6a15a7516, type: 3}
+      propertyPath: LaunchOffset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9071482308549547883, guid: e389fce5a74904b41a478de6a15a7516, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -56356,6 +56368,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 510504508}
     m_Modifications:
+    - target: {fileID: -8769394431606879524, guid: 3a694533aeef8294ab9cc7f4862079a3, type: 3}
+      propertyPath: LaunchOffset
+      value: 
+      objectReference: {fileID: 357516315}
+    - target: {fileID: -8769394431606879524, guid: 3a694533aeef8294ab9cc7f4862079a3, type: 3}
+      propertyPath: ProjectilePrefab
+      value: 
+      objectReference: {fileID: 6704421643437468603, guid: 4970970a97afcef4ea75241a00c6e12d, type: 3}
     - target: {fileID: 5506563182801057029, guid: 3a694533aeef8294ab9cc7f4862079a3, type: 3}
       propertyPath: m_Sprite
       value: 
