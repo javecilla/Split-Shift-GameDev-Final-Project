@@ -4,14 +4,27 @@ public class ProjectileBehavior : MonoBehaviour
 {
     public float speed = 4.5f;
     public Vector2 direction;
+    public float damage = 55f;
 
-    private void Update()
+    void Update()
     {
         transform.position += (Vector3)direction * speed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.CompareTag("Enemy"))
+        {
+            EnemyBase enemy = collision.GetComponent<EnemyBase>();
+            if (enemy != null)
+                enemy.TakeDamage(damage);
+
+            Destroy(gameObject);
+            return;
+        }
+
+        // Destroy on anything except the player itself
+        if (!collision.CompareTag("Player"))
+            Destroy(gameObject);
     }
 }

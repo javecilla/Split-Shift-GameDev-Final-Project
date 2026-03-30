@@ -43,7 +43,7 @@ public class PlayerManager : MonoBehaviour
     {
         resourceCycleTimer += Time.deltaTime;
 
-        if (resourceCycleTimer >= 3f)
+        if (resourceCycleTimer >= 1f)
         {
             resourceCycleTimer = 0f;
 

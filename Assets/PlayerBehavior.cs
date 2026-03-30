@@ -9,7 +9,7 @@ public class PlayerBehavior : MonoBehaviour
     bool isFacingRight = true;
 
     [Header("Jump")]
-    public float jumpPower = 6f;
+    public float jumpPower = 8f;
     public bool isGrounded = false;
     bool canDoubleJump = false;
 
@@ -24,6 +24,12 @@ public class PlayerBehavior : MonoBehaviour
     [Header("Projectile")]
     public GameObject ProjectilePrefab;
     public Transform LaunchOffset;
+
+    [Header("Melee")]
+    public float meleeDamage = 30f;
+    public float meleeRange = 1.5f;
+    public Vector2 meleeBoxSize = new Vector2(1.5f, 1f);
+    public LayerMask enemyLayer;
 
     Rigidbody2D rb;
     Animator animator;
@@ -64,7 +70,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (isGrounded)
             {
-                isGrounded = false; 
+                isGrounded = false;
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                 animator.SetBool("isJumping", true);
 
@@ -87,6 +93,7 @@ public class PlayerBehavior : MonoBehaviour
             if (IsJax)
             {
                 animator.SetTrigger("Attack");
+                // JaxMeleeHit() will be called via animation event
             }
             else
             {
@@ -102,11 +109,32 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
+    // Called via animation event on Jax attack clip
+    public void JaxMeleeHit()
+    {
+        // Detect hit direction based on facing
+        Vector2 hitOrigin = (Vector2)transform.position +
+            (isFacingRight ? Vector2.right : Vector2.left) * (meleeRange / 2);
+
+        Collider2D[] hits = Physics2D.OverlapBoxAll(hitOrigin, meleeBoxSize, 0f, enemyLayer);
+
+        foreach (Collider2D hit in hits)
+        {
+            EnemyBase enemy = hit.GetComponent<EnemyBase>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(meleeDamage);
+                Debug.Log("Jax hit " + hit.gameObject.name + " for " + meleeDamage);
+            }
+        }
+    }
+
     void FireProjectile()
     {
         var proj = Instantiate(ProjectilePrefab, LaunchOffset.position, Quaternion.identity);
         ProjectileBehavior projScript = proj.GetComponent<ProjectileBehavior>();
-        if (projScript != null) projScript.direction = isFacingRight ? Vector2.right : Vector2.left;
+        if (projScript != null)
+            projScript.direction = isFacingRight ? Vector2.right : Vector2.left;
 
         if (!isFacingRight)
             proj.transform.localScale = new Vector3(-1, 1, 1);
@@ -164,11 +192,12 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
 
-    // Refactored to ping the PlayerManager metrics
     public void TakeDamage(float damage)
     {
         PlayerManager.Instance.PlayerHealth -= damage;
         Debug.Log("Player took " + damage + " damage! Health: " + PlayerManager.Instance.PlayerHealth);
+
+        animator.SetTrigger("Damaged");
 
         if (PlayerManager.Instance.PlayerHealth <= 0)
             Debug.Log("Your dead");
@@ -188,5 +217,13 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (collision.CompareTag("Ground"))
             isGrounded = false;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Vector2 hitOrigin = (Vector2)transform.position +
+            (isFacingRight ? Vector2.right : Vector2.left) * (meleeRange / 2);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(hitOrigin, meleeBoxSize);
     }
 }
