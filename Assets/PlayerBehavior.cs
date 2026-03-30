@@ -9,7 +9,7 @@ public class PlayerBehavior : MonoBehaviour
     bool isFacingRight = true;
 
     [Header("Jump")]
-    public float jumpPower = 6f;
+    public float jumpPower = 8f;
     public bool isGrounded = false;
     bool canDoubleJump = false;
 
@@ -169,6 +169,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         PlayerManager.Instance.PlayerHealth -= damage;
         Debug.Log("Player took " + damage + " damage! Health: " + PlayerManager.Instance.PlayerHealth);
+
+        animator.SetTrigger("Damaged");
 
         if (PlayerManager.Instance.PlayerHealth <= 0)
             Debug.Log("Your dead");

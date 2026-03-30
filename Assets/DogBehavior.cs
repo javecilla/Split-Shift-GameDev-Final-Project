@@ -1,14 +1,19 @@
-// enemy melee attack logic
 using UnityEngine;
 
 public class DogBehavior : EnemyBase
 {
     [Header("Charged Attack")]
-    public float chargedAttackDamage = 25f;
+    public float chargedAttackDamage = 45f;
     public float chargedAttackCooldown = 4f;
+    public float chargedAttackRange = 3f;
     float chargedAttackTimer = 0f;
 
-    bool isChargingAttack = false;
+    [Header("Patrol Attack")]
+    public float patrolAttackPauseTime = 1f;
+
+    bool isPatrolAttacking = false;
+    float patrolAttackPauseTimer = 0f;
+    bool attackFromPatrol = false;
 
     protected override void Update()
     {
@@ -16,28 +21,88 @@ public class DogBehavior : EnemyBase
         chargedAttackTimer += Time.deltaTime;
     }
 
-    protected override void TriggerAttack()
+    protected override void Patrol()
     {
-        if (chargedAttackTimer >= chargedAttackCooldown)
+        if (isPatrolAttacking)
         {
-            chargedAttackTimer = 0f;
-            isChargingAttack = true;
-            animator.SetTrigger("ChargedAttack");
-            // ChargedAttackDamage() called via animation event frame
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            patrolAttackPauseTimer += Time.deltaTime;
+
+            if (patrolAttackPauseTimer >= patrolAttackPauseTime)
+            {
+                patrolAttackPauseTimer = 0f;
+                isPatrolAttacking = false;
+                attackFromPatrol = false;
+                movingRight = !movingRight;
+                Flip();
+            }
+            return;
         }
-        else
+
+        // Check if player is blocking the way during patrol
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        if (distanceToPlayer <= chargedAttackRange && chargedAttackTimer >= chargedAttackCooldown)
         {
-            isChargingAttack = false;
-            animator.SetTrigger("NormalAttack");
-            // NormalAttackDamage() called via animation event frame
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            chargedAttackTimer = 0f;
+            isPatrolAttacking = true;
+            attackFromPatrol = false; // charged attack deals damage
+            patrolAttackPauseTimer = 0f;
+            animator.SetTrigger("ChargedAttack");
+            return;
+        }
+
+        float distanceFromStart = transform.position.x - startPos.x;
+        float currentSpeed = movingRight ? moveSpeed : -moveSpeed;
+        rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
+
+        if ((movingRight && distanceFromStart >= patrolDistance) ||
+            (!movingRight && distanceFromStart <= -patrolDistance))
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            isPatrolAttacking = true;
+            attackFromPatrol = true;
+            patrolAttackPauseTimer = 0f;
+            animator.SetTrigger("Attack");
         }
     }
 
-    // Called via animation event frame
+    protected override void TriggerAttack()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+
+        if (distanceToPlayer <= chargedAttackRange && chargedAttackTimer >= chargedAttackCooldown)
+        {
+            chargedAttackTimer = 0f;
+            animator.SetTrigger("ChargedAttack");
+        }
+        else
+        {
+            animator.SetTrigger("Attack");
+        }
+    }
+
+    public override void NormalAttackDamage()
+    {
+        Debug.Log("NormalAttackDamage called! attackFromPatrol: " + attackFromPatrol);
+
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        Debug.Log("Distance to Player: " + distanceToPlayer);
+        Debug.Log("Attack Range: " + attackRange);
+        if (distanceToPlayer > attackRange) return;
+
+        Debug.Log("Dog Normal Attack! Damage: " + normalAttackDamage);
+        Player.GetComponent<PlayerBehavior>().TakeDamage(normalAttackDamage);
+    }
+
     public void ChargedAttackDamage()
     {
         if (PlayerManager.Instance == null || Player == null) return;
-        Debug.Log("Charged Attack! Damage: " + chargedAttackDamage);
+
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        if (distanceToPlayer > chargedAttackRange) return;
+
+        Debug.Log("Dog Charged Attack! Damage: " + chargedAttackDamage);
         Player.GetComponent<PlayerBehavior>().TakeDamage(chargedAttackDamage);
     }
 }
