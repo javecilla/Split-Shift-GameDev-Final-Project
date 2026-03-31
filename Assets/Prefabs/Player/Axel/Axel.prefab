@@ -278,7 +278,7 @@ MonoBehaviour:
   dashDuration: 0.2
   ProjectilePrefab: {fileID: 0}
   LaunchOffset: {fileID: 0}
-  meleeDamage: 30
+  meleeDamage: 10
   meleeRange: 1.5
   meleeBoxSize: {x: 1.5, y: 1}
   enemyLayer:

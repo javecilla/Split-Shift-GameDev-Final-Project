@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438716428743800949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaunchOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 5060645055839081796}
   - component: {fileID: 519733767186924795}
   - component: {fileID: 1511007793817387131}
-  m_Layer: 0
+  - component: {fileID: 4353674589894604609}
+  m_Layer: 7
   m_Name: Ranged Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,3 +221,38 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4353674589894604609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826721223642373437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94fe0431bbc3964787b1aed21361c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  moveSpeed: 4
+  patrolDistance: 4
+  pauseTime: 2
+  flipInitialSprite: 0
+  visionDistance: 6
+  attackRange: 1.5
+  chaseSpeedMultiplier: 2.5
+  normalAttackDamage: 10
+  attackCooldown: 1
+  maxHealth: 100
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 136
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 192
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  bulletDamage: 20
+  chargedAttackDamage: 40
+  chargeDashSpeed: 12
+  chargeDuration: 0.4
+  chargedAttackCooldown: 6
