@@ -278,4 +278,9 @@ MonoBehaviour:
   dashDuration: 0.2
   ProjectilePrefab: {fileID: 0}
   LaunchOffset: {fileID: 0}
-  PlayerHealth: 100
+  meleeDamage: 30
+  meleeRange: 1.5
+  meleeBoxSize: {x: 1.5, y: 1}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
