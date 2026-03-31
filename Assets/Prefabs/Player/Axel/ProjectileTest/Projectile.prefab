@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileBehavior
   speed: 15.5
   direction: {x: 0, y: 0}
+  damage: 25
 --- !u!1 &9162516830873496950
 GameObject:
   m_ObjectHideFlags: 0

@@ -252,7 +252,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8599993432338632072, guid: ddb4d36fda55c1f46a1ecade7ff777a0, type: 3}
   firePoint: {fileID: 4822215432708065236}
   bulletDamage: 20
-  chargedAttackDamage: 40
+  chargedAttackDamage: 15
   chargeDashSpeed: 12
   chargeDuration: 0.4
   chargedAttackCooldown: 6

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Interactable
   - Projectile
+  - Button
   layers:
   - Default
   - TransparentFX

@@ -41,13 +41,15 @@ public class SoldierBehavior : EnemyBase
         {
             if (distanceToPlayer <= attackRange)
                 currentState = State.Attack;
-            else
+            else if (distanceToPlayer <= visionDistance) // ADD THIS CHECK
                 currentState = State.Chase;
+            else
+                currentState = State.Patrol; // too far, back to patrol
         }
         else
         {
             currentState = State.Patrol;
-            hasChargedOnce = false; // reset when player leaves vision
+            hasChargedOnce = false;
         }
     }
 
@@ -90,6 +92,9 @@ public class SoldierBehavior : EnemyBase
     void ShootAtPlayer()
     {
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+
+        if (Vector2.Distance(transform.position, Player.position) > visionDistance) return;
+
         attackTimer += Time.deltaTime;
 
         if (attackTimer >= attackCooldown)

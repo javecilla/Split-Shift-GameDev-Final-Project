@@ -214,11 +214,11 @@ MonoBehaviour:
   maxHealth: 100
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  chargedAttackDamage: 25
+    m_Bits: 64
+  chargedAttackDamage: 15
   chargedAttackCooldown: 4
   chargedAttackRange: 1.5
   patrolAttackPauseTime: 1

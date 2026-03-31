@@ -33,17 +33,27 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
+        HandlePauseInput();
+
         if (PlayerHealth <= 0) return; // Halt logic if dead
 
         ExecuteResourceLifecycle();
         HandleSwitchInput();
     }
 
+    private void HandlePauseInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameManager.Instance.TogglePause();
+        }
+    }
+
     private void ExecuteResourceLifecycle()
     {
         resourceCycleTimer += Time.deltaTime;
 
-        if (resourceCycleTimer >= 1f)
+        if (resourceCycleTimer >= 3f)
         {
             resourceCycleTimer = 0f;
 
