@@ -4,7 +4,7 @@ public class ProjectileBehavior : MonoBehaviour
 {
     public float speed = 4.5f;
     public Vector2 direction;
-    public float damage = 55f;
+    public float damage = 25f;
 
     void Update()
     {

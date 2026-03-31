@@ -6,7 +6,7 @@ public class DogBehavior : EnemyBase
     public float chargedAttackDamage = 45f;
     public float chargedAttackCooldown = 4f;
     public float chargedAttackRange = 3f;
-    float chargedAttackTimer = 0f;
+    float chargedAttackTimer = 4f;
 
     [Header("Patrol Attack")]
     public float patrolAttackPauseTime = 1f;
@@ -15,11 +15,17 @@ public class DogBehavior : EnemyBase
     float patrolAttackPauseTimer = 0f;
     bool attackFromPatrol = false;
 
-    protected override void Update()
+    protected override void Start()
     {
-        base.Update();
-        chargedAttackTimer += Time.deltaTime;
+        base.Start();
+        chargedAttackTimer = chargedAttackCooldown; // ready on spawn
     }
+
+    // protected override void Update()
+    // {
+    //     base.Update();
+    //     chargedAttackTimer += Time.deltaTime;
+    // }
 
     protected override void Patrol()
     {
@@ -39,9 +45,14 @@ public class DogBehavior : EnemyBase
             return;
         }
 
+        bool playerIsAhead = (movingRight && Player.position.x > transform.position.x) ||
+                     (!movingRight && Player.position.x < transform.position.x);
+
+
         // Check if player is blocking the way during patrol
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
-        if (distanceToPlayer <= chargedAttackRange && chargedAttackTimer >= chargedAttackCooldown)
+
+        if (playerIsAhead && distanceToPlayer <= chargedAttackRange && chargedAttackTimer >= chargedAttackCooldown)
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
             chargedAttackTimer = 0f;
@@ -84,14 +95,14 @@ public class DogBehavior : EnemyBase
 
     public override void NormalAttackDamage()
     {
-        Debug.Log("NormalAttackDamage called! attackFromPatrol: " + attackFromPatrol);
+        // Debug.Log("NormalAttackDamage called! attackFromPatrol: " + attackFromPatrol);
 
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
-        Debug.Log("Distance to Player: " + distanceToPlayer);
-        Debug.Log("Attack Range: " + attackRange);
+        // Debug.Log("Distance to Player: " + distanceToPlayer);
+        // Debug.Log("Attack Range: " + attackRange);
         if (distanceToPlayer > attackRange) return;
 
-        Debug.Log("Dog Normal Attack! Damage: " + normalAttackDamage);
+        // Debug.Log("Dog Normal Attack! Damage: " + normalAttackDamage);
         Player.GetComponent<PlayerBehavior>().TakeDamage(normalAttackDamage);
     }
 
@@ -102,7 +113,7 @@ public class DogBehavior : EnemyBase
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
         if (distanceToPlayer > chargedAttackRange) return;
 
-        Debug.Log("Dog Charged Attack! Damage: " + chargedAttackDamage);
+        // Debug.Log("Dog Charged Attack! Damage: " + chargedAttackDamage);
         Player.GetComponent<PlayerBehavior>().TakeDamage(chargedAttackDamage);
     }
 }
