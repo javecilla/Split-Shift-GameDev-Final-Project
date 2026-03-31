@@ -92,7 +92,8 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (IsJax)
             {
-                animator.SetTrigger("Attack 0");
+                animator.SetTrigger("Attack");
+                // JaxMeleeHit() will be called via animation event
             }
             else
             {
