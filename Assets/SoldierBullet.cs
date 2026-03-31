@@ -6,6 +6,12 @@ public class SoldierBullet : MonoBehaviour
     public float damage = 20f;
     public Vector2 direction;
 
+    void Start()
+    {
+        // Force bullet to always move left (since soldier never flips)
+        direction = Vector2.left;
+    }
+
     void Update()
     {
         transform.position += (Vector3)direction * speed * Time.deltaTime;
@@ -21,6 +27,10 @@ public class SoldierBullet : MonoBehaviour
         }
 
         if (!collision.CompareTag("Enemy"))
+            Destroy(gameObject);
+
+        // Destroy on anything except the player itself
+        if (!collision.CompareTag("Player"))
             Destroy(gameObject);
     }
 }
