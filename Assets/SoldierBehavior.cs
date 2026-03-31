@@ -21,10 +21,13 @@ public class SoldierBehavior : EnemyBase
     protected override void Start()
     {
         base.Start();
+
     }
 
     protected override void Update()
     {
+        firePoint.localScale = new Vector3(-1, 1, 1);
+
         if (isDead) return;
         if (PlayerManager.Instance == null || PlayerManager.Instance.CurrentPlayer == null) return;
 
