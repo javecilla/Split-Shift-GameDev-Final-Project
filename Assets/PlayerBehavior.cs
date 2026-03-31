@@ -64,7 +64,7 @@ public class PlayerBehavior : MonoBehaviour
         animator.SetFloat("yVelocity", rb.linearVelocity.y);
     }
 
-    void HandleJump()
+    public void HandleJump()
     {
         if (Input.GetButtonDown("Jump"))
         {

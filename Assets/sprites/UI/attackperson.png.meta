@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7233e2e4197c39946bc9de104d269a3e
+guid: 4dd7ba37e55ebd748a334c4d539013ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6981122440756136070
-    second: dashperson_0
+      213: 6484758579885934366
+    second: attackperson_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dashperson_0
+      name: attackperson_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 13
-        width: 487
-        height: 479
+        x: 3
+        y: 7
+        width: 358
+        height: 359
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68807ce4fdde1e060800000000000000
-      internalID: 6981122440756136070
+      spriteID: e178448129d7ef950800000000000000
+      internalID: 6484758579885934366
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dashperson_0: 6981122440756136070
+      attackperson_0: 6484758579885934366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

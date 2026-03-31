@@ -85,27 +85,32 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if (PlayerMana >= 100)
-            {
-                // Reset metrics upon successful switch
-                PlayerMana = 0;
-                resourceCycleTimer = 0f; 
+            SwitchCharacter();
+        }
+    }
 
-                if (isJax)
-                {
-                    ShiftToAxel();
-                    isJax = false;
-                }
-                else
-                {
-                    ShiftToJax();
-                    isJax = true;
-                }
+    public void SwitchCharacter()
+    {
+        if (PlayerMana >= 100)
+        {
+            // Reset metrics upon successful switch
+            PlayerMana = 0;
+            resourceCycleTimer = 0f; 
+
+            if (isJax)
+            {
+                ShiftToAxel();
+                isJax = false;
             }
             else
             {
-                Debug.Log("Switch denied: Mana is not 100");
+                ShiftToJax();
+                isJax = true;
             }
+        }
+        else
+        {
+            Debug.Log("Switch denied: Mana is not 100");
         }
     }
 
@@ -140,4 +145,5 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
+
 }
