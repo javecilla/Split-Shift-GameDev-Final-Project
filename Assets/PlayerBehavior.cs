@@ -7,7 +7,7 @@ public class PlayerBehavior : MonoBehaviour
     public float moveSpeed = 8f;
     float horizontalInput;
     bool isFacingRight = true;
-    public bool isMobileControls;
+    // public bool isMobileControls;
 
     [Header("Jump")]
     public float jumpPower = 8f;
@@ -48,8 +48,10 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (isDashing) return;
 
-        if(!isMobileControls)
-            horizontalInput = Input.GetAxisRaw("Horizontal");
+        float keyboardInput = Input.GetAxis("Horizontal");
+        if (keyboardInput != 0f)
+            horizontalInput = keyboardInput;
+
 
         FlipPlayerDirection();
         HandleJump();
