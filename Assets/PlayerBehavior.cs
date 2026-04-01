@@ -217,6 +217,7 @@ public class PlayerBehavior : MonoBehaviour
     public void TakeDamage(float damage)
     {
         PlayerManager.Instance.PlayerHealth -= damage;
+        PlayerManager.Instance.UpdateHUD();
         Debug.Log("Player took " + damage + " damage! Health: " + PlayerManager.Instance.PlayerHealth);
 
         animator.SetTrigger("Damaged");

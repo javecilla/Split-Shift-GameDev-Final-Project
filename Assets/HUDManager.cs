@@ -1,11 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
     public static HUDManager Instance;
 
     public GameObject dashButton;
+    public GameObject jaxProfile;
+    public GameObject axelProfile;
 
     void Awake()
     {
@@ -16,6 +17,11 @@ public class HUDManager : MonoBehaviour
     void Update()
     {
         if (PlayerManager.Instance == null) return;
-        dashButton.SetActive(!PlayerManager.Instance.isJax);
+
+        bool isJax = PlayerManager.Instance.isJax;
+
+        dashButton.SetActive(!isJax);
+        jaxProfile.SetActive(isJax);
+        axelProfile.SetActive(!isJax);
     }
 }

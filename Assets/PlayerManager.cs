@@ -1,5 +1,6 @@
 using UnityEngine;
-using Unity.Cinemachine; 
+using Unity.Cinemachine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerManager : MonoBehaviour
     public GameObject cameraObject; 
 
     public bool isJax = true;
+
+    public Slider healthBarSlider;
+    public Slider manaBarSlider;
 
     // Centralized resource metrics
     public double PlayerHealth = 100;
@@ -29,7 +33,22 @@ public class PlayerManager : MonoBehaviour
         Axel.SetActive(false);
         CurrentPlayer = Jax.transform;
         UpdateTrackingTarget(Jax.transform); 
+
+        // Initialize sliders
+        healthBarSlider.minValue = 0;
+        healthBarSlider.maxValue = 100;
+        manaBarSlider.minValue = 0;
+        manaBarSlider.maxValue = 100;
+
+        UpdateHUD();
     }
+
+    public void UpdateHUD()
+    {
+        healthBarSlider.value = (float)PlayerHealth;
+        manaBarSlider.value = (float)PlayerMana;
+    }
+
 
     void Update()
     {
@@ -53,7 +72,7 @@ public class PlayerManager : MonoBehaviour
     {
         resourceCycleTimer += Time.deltaTime;
 
-        if (resourceCycleTimer >= 3f)
+        if (resourceCycleTimer >= 2f) //every 2s
         {
             resourceCycleTimer = 0f;
 
@@ -78,6 +97,8 @@ public class PlayerManager : MonoBehaviour
                     Debug.Log("Your dead");
                 }
             }
+
+            UpdateHUD(); // update after every tick
         }
     }
 
@@ -117,6 +138,8 @@ public class PlayerManager : MonoBehaviour
             // Reset metrics upon successful switch
             PlayerMana = 0;
             resourceCycleTimer = 0f; 
+
+            UpdateHUD();
 
             if (isJax)
             {
