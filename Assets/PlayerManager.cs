@@ -104,6 +104,11 @@ public class PlayerManager : MonoBehaviour
         CurrentPlayer?.GetComponent<PlayerBehavior>()?.PerformAttack();
     }
 
+    public void UIMove(float x)
+    {
+        CurrentPlayer?.GetComponent<PlayerBehavior>()?.MoveX(x);
+    }
+
 
     public void SwitchCharacter()
     {
