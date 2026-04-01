@@ -95,7 +95,7 @@ public class DogBehavior : EnemyBase
 
     public override void NormalAttackDamage()
     {
-        // Debug.Log("NormalAttackDamage called! attackFromPatrol: " + attackFromPatrol);
+        Debug.Log("NormalAttackDamage called! attackFromPatrol: " + attackFromPatrol);
 
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
         // Debug.Log("Distance to Player: " + distanceToPlayer);
