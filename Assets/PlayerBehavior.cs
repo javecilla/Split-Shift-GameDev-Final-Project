@@ -7,6 +7,7 @@ public class PlayerBehavior : MonoBehaviour
     public float moveSpeed = 8f;
     float horizontalInput;
     bool isFacingRight = true;
+    public bool isMobileControls;
 
     [Header("Jump")]
     public float jumpPower = 8f;
@@ -47,11 +48,18 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (isDashing) return;
 
-        horizontalInput = Input.GetAxis("Horizontal");
+        if(!isMobileControls)
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+
         FlipPlayerDirection();
         HandleJump();
         HandleAttack();
         HandleDash();
+    }
+
+    public void MoveX(float x)
+    {
+        horizontalInput = x;
     }
 
     void FixedUpdate()
@@ -67,46 +75,51 @@ public class PlayerBehavior : MonoBehaviour
     public void HandleJump()
     {
         if (Input.GetButtonDown("Jump"))
-        {
-            if (isGrounded)
-            {
-                isGrounded = false;
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
-                animator.SetBool("isJumping", true);
+            PerformJump();
 
-                if (IsJax)
-                    canDoubleJump = true;
-            }
-            else if (IsJax && canDoubleJump)
-            {
-                canDoubleJump = false;
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
-                animator.SetBool("isJumping", true);
-            }
+    }
+
+    public void PerformJump()
+    {
+        if (isGrounded)
+        {
+            isGrounded = false;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            animator.SetBool("isJumping", true);
+            if (IsJax) canDoubleJump = true;
+        }
+        else if (IsJax && canDoubleJump)
+        {
+            canDoubleJump = false;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            animator.SetBool("isJumping", true);
         }
     }
 
-    void HandleAttack()
+    public void HandleAttack()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (IsJax)
-            {
-                animator.SetTrigger("Attack 0");
-            }
-            else
-            {
-                FireProjectile();
-                isRangedAttacking = true;
-                animator.SetTrigger("RangedAttack");
-            }
-        }
+        PerformAttack();
 
         if (isRangedAttacking && animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
-        {
             isRangedAttacking = false;
+
+    }
+
+    public void PerformAttack()
+    {
+        if (IsJax)
+        {
+            animator.SetTrigger("Attack 0");
+        }
+        else
+        {
+            FireProjectile();
+            isRangedAttacking = true;
+            animator.SetTrigger("RangedAttack");
         }
     }
+
 
     // Called via animation event on Jax attack clip
     public void JaxMeleeHit()
@@ -139,7 +152,7 @@ public class PlayerBehavior : MonoBehaviour
             proj.transform.localScale = new Vector3(-1, 1, 1);
     }
 
-    void HandleDash()
+    public void HandleDash()
     {
         if (!IsJax)
         {
@@ -151,12 +164,20 @@ public class PlayerBehavior : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.W) && canDash)
-            {
-                animator.SetBool("isJumping", false);
-                StartCoroutine(PerformDash());
-            }
+                TriggerDash();
         }
     }
+
+    public void TriggerDash() // called by UI
+    {
+        if (!IsJax && canDash)
+        {
+            animator.SetBool("isJumping", false);
+            StartCoroutine(PerformDash());
+        }
+    }
+
+
 
     System.Collections.IEnumerator PerformDash()
     {

@@ -89,6 +89,27 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void UIJump()
+    {
+        CurrentPlayer?.GetComponent<PlayerBehavior>()?.PerformJump();
+    }
+
+    public void UIDash()
+    {
+        CurrentPlayer?.GetComponent<PlayerBehavior>()?.TriggerDash();
+    }
+
+    public void UIAttack()
+    {
+        CurrentPlayer?.GetComponent<PlayerBehavior>()?.PerformAttack();
+    }
+
+    public void UIMove(float x)
+    {
+        CurrentPlayer?.GetComponent<PlayerBehavior>()?.MoveX(x);
+    }
+
+
     public void SwitchCharacter()
     {
         if (PlayerMana >= 100)
