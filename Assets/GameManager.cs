@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     // A single ton game manager to hold global state and references
     public static GameManager Instance;
     public GameObject pauseCanvas;
+    public GameObject gameOverCanvas;
     GameObject tempCanvas;
 
     private void Awake()
@@ -36,6 +37,19 @@ public class GameManager : MonoBehaviour
                 Destroy(tempCanvas);
             Debug.Log("Game Unpaused");
         }
+    }
+
+    public void ShowGameOver()
+    {
+        if (gameOverCanvas == null)
+        {
+            Debug.LogError("gameOverCanvas prefab is not assigned in GameManager Inspector!");
+            return;
+        }
+        
+        Time.timeScale = 0;
+        tempCanvas = Instantiate(gameOverCanvas);
+        Debug.Log("Game Over");
     }
 
 }
