@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 465672027234158238}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LaunchOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5553461902307713143}
   - component: {fileID: 3395435312454780296}
   - component: {fileID: -8769394431606879524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Axel
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -284,3 +284,4 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  offScreenOffset: 2

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1062156951980403947}
   - component: {fileID: 5280556206240169250}
   - component: {fileID: 9034340131222546788}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Jax
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -253,6 +253,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+  offScreenOffset: 2
 --- !u!1 &9071482308549547883
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7176308243235526044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LaunchOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
