@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\jerom\\Desktop",
+        "C:\\Users\\jerom\\Downloads"
+      ]
+    }
+  },
+  "servers": {
+    "unityMCP": {
+      "type": "http",
+      "url": "http://localhost:8080/mcp"
+    },
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+  }
+}
