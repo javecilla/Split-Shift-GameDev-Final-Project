@@ -27863,81 +27863,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 465672027234158238, guid: 3a694533aeef8294ab9cc7f4862079a3, type: 3}
   m_PrefabInstance: {fileID: 4428413398400784684}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &360848017
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 369603950342227558, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482647007244959529, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: flipInitialSprite
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2704479688088328987, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_Name
-      value: Boss 1 - Dinosaur
-      objectReference: {fileID: 0}
-    - target: {fileID: 7282864286345803572, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7282864286345803572, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2704479688088328987, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 826287546}
-    - targetCorrespondingSourceObject: {fileID: 2704479688088328987, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 826287547}
-  m_SourcePrefab: {fileID: 100100000, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
 --- !u!1 &432007271
 GameObject:
   m_ObjectHideFlags: 0
@@ -55871,6 +55796,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &639731499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 164609502925668214, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_Name
+      value: Boss 1 - Dinosaur 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4707922206169928478, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
 --- !u!1 &642297536
 GameObject:
   m_ObjectHideFlags: 0
@@ -56076,60 +56062,6 @@ Transform:
   - {fileID: 252751335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &826287540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2704479688088328987, guid: 772e9325e7d5fa344ab74160519f2adc, type: 3}
-  m_PrefabInstance: {fileID: 360848017}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &826287546
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826287540}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.25, y: 1.6458336}
-  m_Direction: 0
---- !u!114 &826287547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826287540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8893770eff8e1fc46b59f84d71a8fd9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimationEventForwarder
 --- !u!1 &836780842
 GameObject:
   m_ObjectHideFlags: 0
@@ -58422,4 +58354,4 @@ SceneRoots:
   - {fileID: 143404164}
   - {fileID: 1766151150}
   - {fileID: 895562237}
-  - {fileID: 360848017}
+  - {fileID: 639731499}
