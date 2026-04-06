@@ -2,7 +2,7 @@
 name: split-shift-dev
 description: Core Unity C# developer agent for the Split Shift 2D Action-Platformer.
 argument-hint: e.g., "Refactor PlayerController" or "Implement a new EnemyBase derived class"
-tools: ["vscode", "read", "edit", "search", "unityMCP"]
+tools: ["vscode", "read", "edit", "search", "unityMCP", "github"]
 ---
 
 # Role

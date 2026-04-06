@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject cameraObject; 
 
     public bool isJax = true;
+    private bool isGameOver = false;
 
     public Slider healthBarSlider;
     public Slider manaBarSlider;
@@ -54,7 +55,15 @@ public class PlayerManager : MonoBehaviour
     {
         HandlePauseInput();
 
-        if (PlayerHealth <= 0) return; // Halt logic if dead
+        if (PlayerHealth <= 0)
+        {
+            if (!isGameOver)
+            {
+                isGameOver = true;
+                GameManager.Instance.ShowGameOver();
+            }
+            return; // Halt logic if dead
+        }
 
         ExecuteResourceLifecycle();
         HandleSwitchInput();

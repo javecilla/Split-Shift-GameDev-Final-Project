@@ -32,6 +32,10 @@ public class PlayerBehavior : MonoBehaviour
     public Vector2 meleeBoxSize = new Vector2(1.5f, 1f);
     public LayerMask enemyLayer;
 
+    [Header("Fall Death")]
+    public float offScreenOffset = 2f; // Extra distance below camera view before death
+    private float calculatedFallThreshold;
+
     Rigidbody2D rb;
     Animator animator;
     bool isRangedAttacking = false;
@@ -42,11 +46,34 @@ public class PlayerBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        CalculateFallThreshold();
+    }
+
+    private void CalculateFallThreshold()
+    {
+        Camera mainCamera = Camera.main;
+        if (mainCamera != null)
+        {
+            // Calculate the bottom of the camera view
+            float cameraBottom = mainCamera.transform.position.y - mainCamera.orthographicSize;
+            
+            // Set threshold below the camera view with an offset
+            calculatedFallThreshold = cameraBottom - offScreenOffset;
+            
+            Debug.Log($"Fall Threshold calculated: {calculatedFallThreshold} (Camera bottom: {cameraBottom})");
+        }
+        else
+        {
+            Debug.LogWarning("Main Camera not found! Fall death may not work correctly.");
+        }
     }
 
     void Update()
     {
         if (isDashing) return;
+
+        // Check if player fell below threshold
+        CheckFallDeath();
 
         float keyboardInput = Input.GetAxis("Horizontal");
         if (keyboardInput != 0f)
@@ -224,6 +251,16 @@ public class PlayerBehavior : MonoBehaviour
 
         if (PlayerManager.Instance.PlayerHealth <= 0)
             Debug.Log("Your dead");
+    }
+
+    private void CheckFallDeath()
+    {
+        if (transform.position.y < calculatedFallThreshold)
+        {
+            Debug.Log("Player fell off-screen!");
+            PlayerManager.Instance.PlayerHealth = 0;
+            PlayerManager.Instance.UpdateHUD();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
