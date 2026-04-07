@@ -7,6 +7,13 @@ public class GameOverCanvas : MonoBehaviour
     {
         Debug.Log("Restart button clicked!");
         Time.timeScale = 1;
+        
+        // Clean up GameManager's tempCanvas before reloading scene
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.CleanupBeforeReload();
+        }
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

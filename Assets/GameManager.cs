@@ -52,4 +52,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
     }
 
+    public void CleanupBeforeReload()
+    {
+        if (tempCanvas != null)
+        {
+            Destroy(tempCanvas);
+            tempCanvas = null;
+        }
+        Time.timeScale = 1;
+    }
+
 }
