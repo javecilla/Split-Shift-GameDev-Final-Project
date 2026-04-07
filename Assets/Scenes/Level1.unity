@@ -57368,12 +57368,20 @@ PrefabInstance:
       value: Boss 1 - Dinosaur 1
       objectReference: {fileID: 0}
     - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.91
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: -7.84
       objectReference: {fileID: 0}
     - target: {fileID: 1770987792032254606, guid: 2818805e10f09004d910de48c93c4ab3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58030,7 +58038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   pauseCanvas: {fileID: 5263056806607927975, guid: 43b2ddabc3f2e744fb27dc4f153fa969, type: 3}
-  gameOverCanvas: {fileID: 0}
+  gameOverCanvas: {fileID: 8556952617441737957, guid: 75a2ac1fe4878c84586a0ff4245ff3b6, type: 3}
 --- !u!4 &1766151150
 Transform:
   m_ObjectHideFlags: 0
