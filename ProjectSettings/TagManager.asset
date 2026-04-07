@@ -70,6 +70,9 @@ TagManager:
   - name: Projectile
     uniqueID: 1219802843
     locked: 0
+  - name: Traps
+    uniqueID: 1180647589
+    locked: 0
   - name: Platform
     uniqueID: 152587225
     locked: 0
