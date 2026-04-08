@@ -15,20 +15,12 @@ public class InputButtonManager : MonoBehaviour
     [SerializeField] private Button attackButton;
     [SerializeField] private Button switchButton;
 
-    private PlayerBehavior playerBehavior;
     private PlayerManager playerManager;
 
     private void Start()
     {
-        // Cache references to player systems
-        playerBehavior = FindObjectOfType<PlayerBehavior>();
+        // Cache reference to player manager
         playerManager = PlayerManager.Instance;
-
-        if (playerBehavior == null)
-        {
-            Debug.LogError("InputButtonManager: PlayerBehavior not found in scene!");
-            return;
-        }
 
         if (playerManager == null)
         {
@@ -37,16 +29,31 @@ public class InputButtonManager : MonoBehaviour
         }
 
         // Set up movement buttons with press and release events
-        SetupMovementButton(moveLeftButton, () => playerBehavior.MoveX(-1f), "MoveLeft");
-        SetupMovementButton(moveRightButton, () => playerBehavior.MoveX(1f), "MoveRight");
+        SetupMovementButton(moveLeftButton, () => GetActivePlayerBehavior()?.MoveX(-1f), "MoveLeft");
+        SetupMovementButton(moveRightButton, () => GetActivePlayerBehavior()?.MoveX(1f), "MoveRight");
 
-        // Set up action buttons
-        SetupButton(jumpButton, () => playerBehavior.PerformJump(), "Jump");
-        SetupButton(dashButton, () => playerBehavior.TriggerDash(), "Dash");
-        SetupButton(attackButton, () => playerBehavior.PerformAttack(), "Attack");
+        // Set up action buttons - use dynamic player lookup
+        SetupButton(jumpButton, () => GetActivePlayerBehavior()?.PerformJump(), "Jump");
+        SetupButton(dashButton, () => GetActivePlayerBehavior()?.TriggerDash(), "Dash");
+        SetupButton(attackButton, () => GetActivePlayerBehavior()?.PerformAttack(), "Attack");
         SetupButton(switchButton, () => playerManager.SwitchCharacter(), "Switch");
 
         Debug.Log("InputButtonManager: All input buttons set up successfully");
+    }
+
+    /// <summary>
+    /// Get the active player's PlayerBehavior component.
+    /// This ensures we always call methods on the currently active character.
+    /// </summary>
+    private PlayerBehavior GetActivePlayerBehavior()
+    {
+        if (playerManager?.CurrentPlayer != null)
+        {
+            return playerManager.CurrentPlayer.GetComponent<PlayerBehavior>();
+        }
+        
+        Debug.LogWarning("InputButtonManager: Could not get active player behavior!");
+        return null;
     }
 
     /// <summary>
@@ -76,7 +83,7 @@ public class InputButtonManager : MonoBehaviour
         // Pointer Up - Player stops moving
         EventTrigger.Entry pointerUpEntry = new EventTrigger.Entry();
         pointerUpEntry.eventID = EventTriggerType.PointerUp;
-        pointerUpEntry.callback.AddListener((data) => playerBehavior.StopMovement());
+        pointerUpEntry.callback.AddListener((data) => GetActivePlayerBehavior()?.StopMovement());
         trigger.triggers.Add(pointerUpEntry);
 
         Debug.Log($"InputButtonManager: {buttonName} button press/release listeners set up successfully");
