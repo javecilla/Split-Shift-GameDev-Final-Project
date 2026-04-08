@@ -5,6 +5,7 @@ using System.Collections;
 public class LoadingStartCanvas : MonoBehaviour
 {
     [SerializeField] private Button startButton;
+    [SerializeField] private Button exitButton;
     [SerializeField] private GameObject inGameCanvasPrefab;
     [SerializeField] private CanvasGroup fadePanel;
     
@@ -70,6 +71,17 @@ public class LoadingStartCanvas : MonoBehaviour
         {
             Debug.LogError("Start Button not assigned in LoadingStartCanvas Inspector!");
         }
+
+        // Set up the exit button listener
+        if (exitButton != null)
+        {
+            exitButton.onClick.AddListener(OnExitButtonClicked);
+            Debug.Log("Exit button initialized");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Exit Button not assigned in LoadingStartCanvas Inspector!");
+        }
     }
 
     private void OnStartButtonClicked()
@@ -77,6 +89,16 @@ public class LoadingStartCanvas : MonoBehaviour
         startButton.interactable = false;
         Debug.Log("Start button clicked - beginning game transition");
         StartCoroutine(TransitionToGame());
+    }
+
+    private void OnExitButtonClicked()
+    {
+        Debug.Log("Exit button clicked - quitting game");
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 
     private IEnumerator TransitionToGame()
