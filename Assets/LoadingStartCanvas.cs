@@ -18,6 +18,12 @@ public class LoadingStartCanvas : MonoBehaviour
             GameManager.Instance.isRestartingScene = false;
             Debug.Log("🔄 Game restarting - skipping loading screen, resuming gameplay");
             
+            // Reset game state tracker for new session
+            if (GameStateTracker.Instance != null)
+            {
+                GameStateTracker.Instance.ResetState();
+            }
+            
             // Instantiate the InGameCanvas prefab on restart
             if (inGameCanvasPrefab != null)
             {
