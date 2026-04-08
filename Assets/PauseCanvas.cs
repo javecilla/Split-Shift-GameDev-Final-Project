@@ -5,7 +5,16 @@ public class PauseCanvas : MonoBehaviour
 {
     public void Resume()
     {
-        GameManager.Instance.TogglePause();
+        if (GameManager.Instance != null)
+        {
+            // Clear the menu canvas reference so it doesn't show
+            GameManager.Instance.SetActiveMenuCanvas(null);
+            GameManager.Instance.TogglePause();
+        }
+        else
+        {
+            Debug.LogError("❌ GameManager.Instance is null!");
+        }
     }
 
     public void Quit()

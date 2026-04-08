@@ -7,10 +7,16 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameObject pauseCanvas;
     
+    // Reference to active menu canvas
+    private GameObject activeMenuCanvas;
+    
     // Star-based loss canvas variants
     [SerializeField] private GameObject lossCanvas0Stars;
     [SerializeField] private GameObject lossCanvas1Star;
     [SerializeField] private GameObject lossCanvas2Stars;
+    
+    // Win canvas (3 stars)
+    [SerializeField] private GameObject winCanvas3Stars;
     
     GameObject tempCanvas;
     
@@ -87,6 +93,19 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over - Star Rating: " + starRating);
     }
 
+    public void ShowWin()
+    {
+        if (winCanvas3Stars == null)
+        {
+            Debug.LogError("❌ Win canvas prefab not assigned in GameManager Inspector!");
+            return;
+        }
+
+        Time.timeScale = 0;
+        tempCanvas = Instantiate(winCanvas3Stars);
+        Debug.Log("🏆 Victory! Showing Win Canvas with 3 Stars");
+    }
+
     public void CleanupBeforeReload()
     {
         if (tempCanvas != null)
@@ -95,6 +114,21 @@ public class GameManager : MonoBehaviour
             tempCanvas = null;
         }
         Time.timeScale = 1;
+    }
+
+    public void SetActiveMenuCanvas(GameObject menuCanvas)
+    {
+        activeMenuCanvas = menuCanvas;
+        Debug.Log("Menu Canvas reference stored in GameManager");
+    }
+
+    public void ShowActiveMenuCanvas()
+    {
+        if (activeMenuCanvas != null)
+        {
+            activeMenuCanvas.SetActive(true);
+            Debug.Log("Menu Canvas shown");
+        }
     }
 
 }
