@@ -6,7 +6,12 @@ public class GameManager : MonoBehaviour
     // A single ton game manager to hold global state and references
     public static GameManager Instance;
     public GameObject pauseCanvas;
-    public GameObject gameOverCanvas;
+    
+    // Star-based loss canvas variants
+    [SerializeField] private GameObject lossCanvas0Stars;
+    [SerializeField] private GameObject lossCanvas1Star;
+    [SerializeField] private GameObject lossCanvas2Stars;
+    
     GameObject tempCanvas;
     
     // Flag to skip loading screen on restart
@@ -44,15 +49,42 @@ public class GameManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        if (gameOverCanvas == null)
+        Time.timeScale = 0;
+        
+        // Get the star rating from GameStateTracker
+        int starRating = 0;
+        GameObject selectedLossCanvas = null;
+        
+        if (GameStateTracker.Instance != null)
         {
-            Debug.LogError("gameOverCanvas prefab is not assigned in GameManager Inspector!");
+            starRating = GameStateTracker.Instance.CalculateStarRating();
+        }
+
+        // Select the appropriate loss canvas based on star rating
+        switch (starRating)
+        {
+            case 0:
+                selectedLossCanvas = lossCanvas0Stars;
+                Debug.Log("📊 Showing Loss Canvas: 0 Stars");
+                break;
+            case 1:
+                selectedLossCanvas = lossCanvas1Star;
+                Debug.Log("📊 Showing Loss Canvas: 1 Star");
+                break;
+            case 2:
+                selectedLossCanvas = lossCanvas2Stars;
+                Debug.Log("📊 Showing Loss Canvas: 2 Stars");
+                break;
+        }
+
+        if (selectedLossCanvas == null)
+        {
+            Debug.LogError("❌ Loss canvas prefab not assigned for star rating: " + starRating);
             return;
         }
-        
-        Time.timeScale = 0;
-        tempCanvas = Instantiate(gameOverCanvas);
-        Debug.Log("Game Over");
+
+        tempCanvas = Instantiate(selectedLossCanvas);
+        Debug.Log("Game Over - Star Rating: " + starRating);
     }
 
     public void CleanupBeforeReload()

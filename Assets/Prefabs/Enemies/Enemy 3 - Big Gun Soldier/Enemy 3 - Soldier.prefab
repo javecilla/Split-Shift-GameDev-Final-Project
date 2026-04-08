@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7635009852255188504}
   - component: {fileID: 7351872337130769759}
   m_Layer: 7
-  m_Name: Ranged Enemy
+  m_Name: Enemy 3 - Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -142868491
-  m_SortingLayer: 12
+  m_SortingLayer: 13
   m_SortingOrder: 0
   m_Sprite: {fileID: -2635220530030887118, guid: 684bc3ec7bd961147a4cd8358dcab030, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

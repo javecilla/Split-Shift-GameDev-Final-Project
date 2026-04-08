@@ -171,6 +171,13 @@ public abstract class EnemyBase : MonoBehaviour
         isDead = true;
         rb.linearVelocity = Vector2.zero;
         animator.SetTrigger("Death");
+        
+        // Report to GameStateTracker
+        if (GameStateTracker.Instance != null)
+        {
+            GameStateTracker.Instance.ReportEnemyDefeated(this);
+        }
+        
         // Destroy after death animation plays
         Destroy(gameObject, 2f);
     }
