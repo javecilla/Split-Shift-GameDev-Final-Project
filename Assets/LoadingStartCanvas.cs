@@ -12,6 +12,34 @@ public class LoadingStartCanvas : MonoBehaviour
 
     void Start()
     {
+        // Check if this is a scene restart - skip loading screen effects
+        if (GameManager.Instance != null && GameManager.Instance.isRestartingScene)
+        {
+            GameManager.Instance.isRestartingScene = false;
+            Debug.Log("🔄 Game restarting - skipping loading screen, resuming gameplay");
+            
+            // Instantiate the InGameCanvas prefab on restart
+            if (inGameCanvasPrefab != null)
+            {
+                GameObject inGameCanvas = Instantiate(inGameCanvasPrefab);
+                Debug.Log("✓ InGameCanvas prefab instantiated");
+
+                if (PlayerManager.Instance != null)
+                {
+                    PlayerManager.Instance.InitializeSliders(inGameCanvas);
+                }
+            }
+            else
+            {
+                Debug.LogError("❌ InGameCanvas prefab NOT assigned in LoadingStartCanvas Inspector!");
+            }
+            
+            Time.timeScale = 1f;
+            gameObject.SetActive(false);
+            return;
+        }
+
+        // Normal loading screen flow
         // Pause the game while loading canvas is showing
         Time.timeScale = 0f;
         Debug.Log("⏸️ Game paused - Loading canvas active");

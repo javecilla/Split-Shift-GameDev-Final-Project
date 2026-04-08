@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public GameObject pauseCanvas;
     public GameObject gameOverCanvas;
     GameObject tempCanvas;
+    
+    // Flag to skip loading screen on restart
+    public bool isRestartingScene = false;
 
     private void Awake()
     {
