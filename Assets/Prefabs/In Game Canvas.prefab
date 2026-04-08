@@ -119,19 +119,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7447188836636862404}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: UIAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1179051464794526518
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +940,7 @@ GameObject:
   - component: {fileID: 5738818417020131311}
   - component: {fileID: 6926476806751111318}
   - component: {fileID: 5129185338310261446}
+  - component: {fileID: 5906883775997016500}
   m_Layer: 5
   m_Name: In Game Canvas
   m_TagString: Untagged
@@ -1060,6 +1049,24 @@ MonoBehaviour:
   dashButton: {fileID: 8417517662673086994}
   jaxProfile: {fileID: 2865232271866436954}
   axelProfile: {fileID: 4609161024974446027}
+--- !u!114 &5906883775997016500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099526078767867934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4065117b5c9e2ee4ca5e323796982dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputButtonManager
+  moveLeftButton: {fileID: 152134343325571443}
+  moveRightButton: {fileID: 470209591867709848}
+  jumpButton: {fileID: 6892249449051768633}
+  dashButton: {fileID: 7508418780023292075}
+  attackButton: {fileID: 2679006627243150779}
+  switchButton: {fileID: 8053741077515152877}
 --- !u!1 &7109101946543559194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,19 +1352,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8372656730953212674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: UIJump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7471486834149381246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,19 +1660,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1603908096122285494}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: UIDash
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8438518014249331340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,19 +1780,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 90096573482953972}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: SwitchCharacter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8472151905025059577
 GameObject:
   m_ObjectHideFlags: 0
