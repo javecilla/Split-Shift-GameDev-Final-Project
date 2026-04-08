@@ -34,20 +34,80 @@ public class PlayerManager : MonoBehaviour
         Axel.SetActive(false);
         CurrentPlayer = Jax.transform;
         UpdateTrackingTarget(Jax.transform); 
+    }
 
-        // Initialize sliders
-        healthBarSlider.minValue = 0;
-        healthBarSlider.maxValue = 100;
-        manaBarSlider.minValue = 0;
-        manaBarSlider.maxValue = 100;
+    public void InitializeSliders(GameObject inGameCanvas)
+    {
+        // Find Health Bar by searching for it by name
+        Transform playerPanelTransform = inGameCanvas.transform.Find("Player Panel");
+        if (playerPanelTransform == null)
+        {
+            Debug.LogError("Player Panel not found in InGameCanvas!");
+            return;
+        }
 
-        UpdateHUD();
+        // Find Health Bar Slider
+        Transform healthBarTransform = playerPanelTransform.Find("Health Bar");
+        if (healthBarTransform != null)
+        {
+            healthBarSlider = healthBarTransform.GetComponent<Slider>();
+            if (healthBarSlider == null)
+            {
+                Debug.LogError("Slider component not found on Health Bar GameObject!");
+            }
+            else
+            {
+                Debug.Log("✓ Health Bar Slider found successfully");
+            }
+        }
+        else
+        {
+            Debug.LogError("Health Bar GameObject not found under Player Panel!");
+        }
+
+        // Find Mana Bar Slider
+        Transform manaBarTransform = playerPanelTransform.Find("Mana Bar");
+        if (manaBarTransform != null)
+        {
+            manaBarSlider = manaBarTransform.GetComponent<Slider>();
+            if (manaBarSlider == null)
+            {
+                Debug.LogError("Slider component not found on Mana Bar GameObject!");
+            }
+            else
+            {
+                Debug.Log("✓ Mana Bar Slider found successfully");
+            }
+        }
+        else
+        {
+            Debug.LogError("Mana Bar GameObject not found under Player Panel!");
+        }
+
+        // Initialize sliders if found
+        if (healthBarSlider != null && manaBarSlider != null)
+        {
+            healthBarSlider.minValue = 0;
+            healthBarSlider.maxValue = 100;
+            manaBarSlider.minValue = 0;
+            manaBarSlider.maxValue = 100;
+
+            UpdateHUD();
+            Debug.Log("✓ All sliders initialized successfully!");
+        }
+        else
+        {
+            Debug.LogError("❌ Failed to initialize sliders - sliders are null!");
+        }
     }
 
     public void UpdateHUD()
     {
-        healthBarSlider.value = (float)PlayerHealth;
-        manaBarSlider.value = (float)PlayerMana;
+        if (healthBarSlider != null)
+            healthBarSlider.value = (float)PlayerHealth;
+        
+        if (manaBarSlider != null)
+            manaBarSlider.value = (float)PlayerMana;
     }
 
 
@@ -199,4 +259,34 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void ResetGameState()
+    {
+        // Reset health and mana
+        PlayerHealth = 100;
+        PlayerMana = 0;
+        resourceCycleTimer = 0f;
+        isGameOver = false;
+
+        // Reset to Jax
+        if (!isJax)
+        {
+            ShiftToJax();
+            isJax = true;
+        }
+
+        // Reset player position to spawn point (0, 0, 0)
+        if (Jax != null)
+        {
+            Jax.transform.position = Vector3.zero;
+        }
+        if (Axel != null)
+        {
+            Axel.transform.position = Vector3.zero;
+        }
+
+        // Update HUD
+        UpdateHUD();
+
+        Debug.Log("✓ Game state reset - ready for new session");
+    }
 }
