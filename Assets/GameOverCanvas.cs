@@ -8,19 +8,7 @@ public class GameOverCanvas : MonoBehaviour
         Debug.Log("Restart button clicked!");
         Time.timeScale = 1;
         
-        // Reset game state without reloading scene
-        if (PlayerManager.Instance != null)
-        {
-            PlayerManager.Instance.ResetGameState();
-        }
-
-        // Clean up GameManager's overlay
-        if (GameManager.Instance != null)
-        {
-            GameManager.Instance.CleanupBeforeReload();
-        }
-        
-        // Destroy the game over canvas
-        Destroy(gameObject);
+        // Reload the scene to reset all enemies and game state
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
