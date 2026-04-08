@@ -91,6 +91,11 @@ public class PlayerBehavior : MonoBehaviour
         horizontalInput = x;
     }
 
+    public void StopMovement()
+    {
+        horizontalInput = 0f;
+    }
+
     void FixedUpdate()
     {
         if (isDashing) return;
