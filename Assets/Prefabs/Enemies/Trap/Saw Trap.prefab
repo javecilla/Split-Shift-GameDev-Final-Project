@@ -202,7 +202,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147626908467746099}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -252,7 +252,7 @@ CapsuleCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -270,3 +270,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cfdbd6b8a46c1e4ea7c5824a6560cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SawBehavior
+  damageAmount: 5
+  damageCooldown: 0.5
