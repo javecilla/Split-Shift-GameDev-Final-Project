@@ -15,9 +15,14 @@ public class DogBehavior : EnemyBase
     float patrolAttackPauseTimer = 0f;
     bool attackFromPatrol = false;
 
+    [Header("Audio")]
+    AudioSource aud;
+    public AudioClip attackSFX, deathSFX, damagedSFX;
+
     protected override void Start()
     {
         base.Start();
+        aud = GetComponent<AudioSource>();
         chargedAttackTimer = chargedAttackCooldown; // ready on spawn
     }
 
@@ -86,10 +91,20 @@ public class DogBehavior : EnemyBase
         {
             chargedAttackTimer = 0f;
             animator.SetTrigger("ChargedAttack");
+            if (attackSFX != null)
+            {
+                aud.clip = attackSFX;
+                aud.Play();    
+            }
         }
         else
         {
             animator.SetTrigger("Attack");
+            if (attackSFX != null)
+            {
+                aud.clip = attackSFX;
+                aud.Play();    
+            }
         }
     }
 

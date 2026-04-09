@@ -18,9 +18,14 @@ public class SoldierBehavior : EnemyBase
     float chargeDashTimer = 0f;
     bool hasChargedOnce = false;
 
+    [Header("Audio")]
+    public AudioClip gunSFX, deathSFX, damagedSFX;
+    private AudioSource aud;
+
     protected override void Start()
     {
         base.Start();
+        aud = GetComponent<AudioSource>();
 
     }
 
@@ -173,5 +178,20 @@ public class SoldierBehavior : EnemyBase
 
         Debug.Log("Soldier Charge Hit! Damage: " + chargedAttackDamage);
         Player.GetComponent<PlayerBehavior>().TakeDamage(chargedAttackDamage);
+    }
+
+    public void GunSounds()
+    {
+        if (gunSFX != null && aud != null) aud.PlayOneShot(gunSFX);
+    }
+
+    public void DeathSounds()
+    {
+        if (deathSFX != null && aud != null) aud.PlayOneShot(deathSFX);
+    }
+
+    public void DamagedSounds()
+    {
+        if (damagedSFX != null && aud != null) aud.PlayOneShot(damagedSFX);
     }
 }

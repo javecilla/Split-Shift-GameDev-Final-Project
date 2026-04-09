@@ -21,9 +21,14 @@ public class NinjaBehaviour : EnemyBase
     private bool _isPatrolAttacking = false;
     private float _patrolAttackPauseTimer = 0f;
 
+    [Header("Audio")]
+    AudioSource aud;
+    public AudioClip attackSFX, deathSFX, damagedSFX;
+
     protected override void Start()
     {
         base.Start();
+        aud = GetComponent<AudioSource>();
         _firstAttackTimer = _firstAttackCooldown;   // Ready on spawn
         _secondAttackTimer = _secondAttackCooldown; // Ready on spawn
     }
@@ -209,5 +214,20 @@ public class NinjaBehaviour : EnemyBase
 
         Debug.Log("Ninja Second Attack! Damage: " + _secondAttackDamage);
         Player.GetComponent<PlayerBehavior>().TakeDamage(_secondAttackDamage);
+    }
+
+    public void AttackSound()
+    {
+        if (attackSFX != null && aud != null) aud.PlayOneShot(attackSFX);
+    }
+
+    public void DeathSound()
+    {
+        if (deathSFX != null && aud != null) aud.PlayOneShot(deathSFX);
+    }
+
+    public void DamagedSound()
+    {
+        if (damagedSFX != null && aud != null) aud.PlayOneShot(damagedSFX);
     }
 }

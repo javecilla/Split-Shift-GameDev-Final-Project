@@ -7,27 +7,36 @@ public class SawTrapBehavior : MonoBehaviour
 
     private float damageTimer = 0f;
 
+    [Header("Audio")]
+    public AudioClip damageSFX;
+    private AudioSource aud;
+
+    void Start()
+    {
+        aud = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
-        // Tick down the damage cooldown timer
         if (damageTimer > 0)
-        {
             damageTimer -= Time.deltaTime;
-        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // Check if the colliding object is the player
         if (collision.CompareTag("Player"))
         {
-            // Deal damage if cooldown has elapsed
             if (damageTimer <= 0)
             {
                 PlayerBehavior player = collision.GetComponent<PlayerBehavior>();
                 if (player != null)
                 {
                     player.TakeDamage(damageAmount);
+
+                    // 🔊 Play trap damage sound
+                    if (damageSFX != null && aud != null)
+                        aud.PlayOneShot(damageSFX);
+
                     damageTimer = damageCooldown;
                 }
             }

@@ -10,6 +10,17 @@ public class DinosaurBehaviour : EnemyBase
     private float _attackAnimationTimer = 0f;
     private bool _hasDealtDamageInCurrentAttack = false;
 
+    [Header("Audio")]
+    public AudioClip fireSFX, deathSFX, damagedSFX, walkSFX;
+    private AudioSource aud;
+
+    protected override void Start()
+    {
+        base.Start();  
+        aud = GetComponent<AudioSource>();
+    }
+
+
     protected override void Update()
     {
         base.Update(); // Call base Update to see state changes
@@ -67,4 +78,25 @@ public class DinosaurBehaviour : EnemyBase
             Player.GetComponent<PlayerBehavior>().TakeDamage(_redAttackDamage);
         }
     }
+
+    public void WalkSounds()
+    {
+        if (walkSFX != null && aud != null) aud.PlayOneShot(walkSFX);
+    }
+
+    public void FireSounds()
+    {
+        if (fireSFX != null && aud != null) aud.PlayOneShot(fireSFX);
+    }
+
+    public void DamagedSounds()
+    {
+        if (damagedSFX != null && aud != null) aud.PlayOneShot(damagedSFX);
+    }
+
+    public void DeathSounds()
+    {
+        if (deathSFX != null && aud != null) aud.PlayOneShot(deathSFX);
+    }
 }
+
