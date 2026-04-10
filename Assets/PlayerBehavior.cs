@@ -36,6 +36,10 @@ public class PlayerBehavior : MonoBehaviour
     public float offScreenOffset = 2f; // Extra distance below camera view before death
     private float calculatedFallThreshold;
 
+    [Header("Audio")]
+    AudioSource aud;
+    public AudioClip jumpSFX, dashSFX, runSFX, punchSFX, projectileSFX, deathSFX, damagedSFX;
+
     Rigidbody2D rb;
     Animator animator;
     bool isRangedAttacking = false;
@@ -46,6 +50,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();
         CalculateFallThreshold();
     }
 
@@ -104,6 +109,25 @@ public class PlayerBehavior : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
         animator.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
         animator.SetFloat("yVelocity", rb.linearVelocity.y);
+
+        // Walking sound
+        bool isWalking = Mathf.Abs(horizontalInput) > 0.1f && isGrounded;
+        if (isWalking)
+        {
+            if (!aud.isPlaying || aud.clip != runSFX)
+            {
+                aud.clip = runSFX;
+                aud.loop = true;
+                aud.Play();
+            }
+        }
+        else
+        {
+            if (aud.isPlaying && aud.clip == runSFX)
+            {
+                aud.Stop();
+            }
+        }
     }
 
     public void HandleJump()
@@ -120,6 +144,11 @@ public class PlayerBehavior : MonoBehaviour
             isGrounded = false;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             animator.SetBool("isJumping", true);
+            if (jumpSFX != null)
+            {
+                aud.clip = jumpSFX;
+                aud.Play();    
+            } 
             if (IsJax) canDoubleJump = true;
         }
         else if (IsJax && canDoubleJump)
@@ -127,6 +156,11 @@ public class PlayerBehavior : MonoBehaviour
             canDoubleJump = false;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             animator.SetBool("isJumping", true);
+            if (jumpSFX != null)
+            {
+                aud.clip = jumpSFX;
+                aud.Play();    
+            } 
         }
     }
 
@@ -145,12 +179,22 @@ public class PlayerBehavior : MonoBehaviour
         if (IsJax)
         {
             animator.SetTrigger("Attack 0");
+            if (punchSFX != null)
+            {
+                aud.clip = punchSFX;
+                aud.Play();    
+            } 
         }
         else
         {
             FireProjectile();
             isRangedAttacking = true;
             animator.SetTrigger("RangedAttack");
+            if (projectileSFX != null)
+            {
+                aud.clip = projectileSFX;
+                aud.Play();    
+            } 
         }
     }
 
@@ -219,6 +263,12 @@ public class PlayerBehavior : MonoBehaviour
         canDash = false;
         dashCooldownTimer = dashCooldown;
 
+        if (dashSFX != null)
+            {
+                aud.clip = dashSFX;
+                aud.Play();    
+            } 
+
         float dashDirection = horizontalInput != 0
             ? Mathf.Sign(horizontalInput)
             : (isFacingRight ? 1f : -1f);
@@ -254,8 +304,14 @@ public class PlayerBehavior : MonoBehaviour
 
         animator.SetTrigger("Damaged");
 
+        if (deathSFX != null) aud.PlayOneShot(deathSFX);
+
         if (PlayerManager.Instance.PlayerHealth <= 0)
+        {
+            
             Debug.Log("Your dead");
+            if (deathSFX != null) aud.PlayOneShot(deathSFX);
+        }
     }
 
     private void CheckFallDeath()
