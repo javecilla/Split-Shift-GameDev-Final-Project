@@ -1,4 +1,4 @@
-![Logo](https://jerome-avecilla.infinityfreeapp.com/assets/gamedev/ss-front.png)
+![Logo](https://jerome-avecilla.infinityfreeapp.com/assets/gamedev/ss-front-qr.png)
 
 # SPLIT SHIFT - 2D Action-Platformer
 
