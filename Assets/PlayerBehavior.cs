@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -80,14 +81,35 @@ public class PlayerBehavior : MonoBehaviour
         // Check if player fell below threshold
         CheckFallDeath();
 
-        float keyboardInput = Input.GetAxis("Horizontal");
-        if (keyboardInput != 0f)
-            horizontalInput = keyboardInput;
+        // Get movement input from keyboard and gamepad
+        float moveInput = 0f;
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.dKey.isPressed) moveInput = 1f;
+            else if (Keyboard.current.aKey.isPressed) moveInput = -1f;
+            else if (Keyboard.current.rightArrowKey.isPressed) moveInput = 1f;
+            else if (Keyboard.current.leftArrowKey.isPressed) moveInput = -1f;
+        }
+        
+        // Also support gamepad
+        if (Gamepad.current != null)
+        {
+            float gamepadInput = Gamepad.current.leftStick.x.ReadValue();
+            if (Mathf.Abs(gamepadInput) > 0.1f) moveInput = gamepadInput;
+        }
 
+        horizontalInput = moveInput;
+
+        // Handle Jump
+        HandleJump();
+
+        // Check for Q key for Attack
+        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            HandleAttack();
+        }
 
         FlipPlayerDirection();
-        HandleJump();
-        HandleAttack();
         HandleDash();
     }
 
@@ -132,9 +154,15 @@ public class PlayerBehavior : MonoBehaviour
 
     public void HandleJump()
     {
-        if (Input.GetButtonDown("Jump"))
-            PerformJump();
+        // Check for Space key or gamepad button
+        bool jumpPressed = false;
+        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+            jumpPressed = true;
+        if (Gamepad.current != null && Gamepad.current.bButton.wasPressedThisFrame)
+            jumpPressed = true;
 
+        if (jumpPressed)
+            PerformJump();
     }
 
     public void PerformJump()
@@ -166,12 +194,10 @@ public class PlayerBehavior : MonoBehaviour
 
     public void HandleAttack()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
         PerformAttack();
 
         if (isRangedAttacking && animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
             isRangedAttacking = false;
-
     }
 
     public void PerformAttack()
@@ -241,7 +267,14 @@ public class PlayerBehavior : MonoBehaviour
                     canDash = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.W) && canDash)
+            // Check for W key or gamepad for Axel's dash
+            bool dashPressed = false;
+            if (Keyboard.current != null && Keyboard.current.wKey.wasPressedThisFrame)
+                dashPressed = true;
+            if (Gamepad.current != null && Gamepad.current.xButton.wasPressedThisFrame)
+                dashPressed = true;
+
+            if (dashPressed && canDash)
                 TriggerDash();
         }
     }

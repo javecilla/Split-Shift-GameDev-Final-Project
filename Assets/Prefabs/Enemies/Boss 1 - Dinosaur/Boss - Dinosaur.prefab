@@ -138,7 +138,7 @@ MonoBehaviour:
   chaseSpeedMultiplier: 2.5
   normalAttackDamage: 10
   attackCooldown: 1.5
-  maxHealth: 100
+  maxHealth: 500
   playerLayer:
     serializedVersion: 2
     m_Bits: 8

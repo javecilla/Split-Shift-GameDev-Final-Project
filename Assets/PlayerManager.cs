@@ -1,6 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class PlayerManager : MonoBehaviour
     {
         Axel.SetActive(false);
         CurrentPlayer = Jax.transform;
-        UpdateTrackingTarget(Jax.transform); 
+        UpdateTrackingTarget(Jax.transform);
     }
 
     public void InitializeSliders(GameObject inGameCanvas)
@@ -131,7 +132,7 @@ public class PlayerManager : MonoBehaviour
 
     private void HandlePauseInput()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             GameManager.Instance.TogglePause();
         }
@@ -173,7 +174,7 @@ public class PlayerManager : MonoBehaviour
 
     private void HandleSwitchInput()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Keyboard.current != null && Keyboard.current.leftShiftKey.wasPressedThisFrame)
         {
             SwitchCharacter();
         }
