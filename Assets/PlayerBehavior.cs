@@ -7,6 +7,7 @@ public class PlayerBehavior : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 8f;
     float horizontalInput;
+    float _uiHorizontalInput = 0f;  // Separate tracking for UI button input
     bool isFacingRight = true;
     // public bool isMobileControls;
 
@@ -81,24 +82,30 @@ public class PlayerBehavior : MonoBehaviour
         // Check if player fell below threshold
         CheckFallDeath();
 
-        // Get movement input from keyboard and gamepad
-        float moveInput = 0f;
+        // Get movement input from keyboard - keyboard has priority over UI
+        float keyboardInput = 0f;
         if (Keyboard.current != null)
         {
-            if (Keyboard.current.dKey.isPressed) moveInput = 1f;
-            else if (Keyboard.current.aKey.isPressed) moveInput = -1f;
-            else if (Keyboard.current.rightArrowKey.isPressed) moveInput = 1f;
-            else if (Keyboard.current.leftArrowKey.isPressed) moveInput = -1f;
+            if (Keyboard.current.dKey.isPressed)
+                keyboardInput = 1f;
+            else if (Keyboard.current.aKey.isPressed)
+                keyboardInput = -1f;
+            else if (Keyboard.current.rightArrowKey.isPressed)
+                keyboardInput = 1f;
+            else if (Keyboard.current.leftArrowKey.isPressed)
+                keyboardInput = -1f;
         }
         
-        // Also support gamepad
+        // Gamepad input overrides keyboard
         if (Gamepad.current != null)
         {
             float gamepadInput = Gamepad.current.leftStick.x.ReadValue();
-            if (Mathf.Abs(gamepadInput) > 0.1f) moveInput = gamepadInput;
+            if (Mathf.Abs(gamepadInput) > 0.1f)
+                keyboardInput = gamepadInput;
         }
 
-        horizontalInput = moveInput;
+        // Use keyboard input if available, otherwise use UI input
+        horizontalInput = (keyboardInput != 0f) ? keyboardInput : _uiHorizontalInput;
 
         // Handle Jump
         HandleJump();
@@ -115,12 +122,12 @@ public class PlayerBehavior : MonoBehaviour
 
     public void MoveX(float x)
     {
-        horizontalInput = x;
+        _uiHorizontalInput = x;
     }
 
     public void StopMovement()
     {
-        horizontalInput = 0f;
+        _uiHorizontalInput = 0f;
     }
 
     void FixedUpdate()
