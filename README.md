@@ -75,8 +75,8 @@ Our team is composed of five members, each with a specific role to ensure the su
 | :--- | :--- | :--- |
 | **Project Manager (Leader), Game Designer and Artist** | Francis | - Design the overall game experience, UI/UX, and visual style.<br>- Create high-fidelity pixel art assets, character sprites, and animations.<br>- Ensure the game aesthetic is cohesive, modern, and fits the "gritty" theme. |
 | **Level and Sound Designer** | Rensen | - Design immersive level layouts, including platform placement, enemy spawns, and traps.<br>- Source and implement sound effects (SFX) and background music (BGM) to enhance atmosphere.<br>- Balance level difficulty and pacing. |
-| **Game Programmer** | Jerome | - Develop core gameplay mechanics, physics, and the "Split Shift" character swapping logic.<br>- Manage game state, data structures, and save/load systems.<br>- Handle project environment setup and build deployment. |
-| **Game Programmer** | Mico | - Implement User Interface (UI) functionality (Main Menu, HUD, Stress Meter).<br>- Handle scene management, game transitions, and pause systems.<br>- Assist with gameplay scripting and interactions. |
+| **Game Programmer** | Jerome | - Develop core gameplay mechanics, physics, and the "Split Shift" character swapping logic.<br>- Manage game state, data structures, and save/load systems.<br>- Handle project environment setup and build deployment.<br> Implement User Interface (UI) functionality (Main Menu, HUD, Stress Meter).<br>- Handle scene management, game transitions, and pause systems.|
+| **Game Programmer** | Mico | - Assist with gameplay scripting and interactions. |
 | **Game Quality Assurance (Tester)** | Giga | - Develop and execute test plans based on game mechanics and level design.<br>- Perform functional testing to identify bugs, glitches, or exploits.<br>- Provide feedback on game difficulty balancing and user experience. |
 
 ---
