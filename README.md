@@ -77,7 +77,7 @@ Our team is composed of five members, each with a specific role to ensure the su
 | **Level and Sound Designer** | Rensen | - Design immersive level layouts, including platform placement, enemy spawns, and traps.<br>- Source and implement sound effects (SFX) and background music (BGM) to enhance atmosphere.<br>- Balance level difficulty and pacing. |
 | **Game Programmer** | Jerome | - Develop core gameplay mechanics, physics, and the "Split Shift" character swapping logic.<br>- Manage game state, data structures, and save/load systems.<br>- Handle project environment setup and build deployment.<br> Implement User Interface (UI) functionality (Main Menu, HUD, Stress Meter).<br>- Handle scene management, game transitions, and pause systems.|
 | **Game Programmer** | Mico | - Assist with gameplay scripting and interactions. |
-| **Game Quality Assurance (Tester)** | Giga | - Develop and execute test plans based on game mechanics and level design.<br>- Perform functional testing to identify bugs, glitches, or exploits.<br>- Provide feedback on game difficulty balancing and user experience. |
+| **Game Quality Assurance (Tester)** | Giga | - Provide feedback on game difficulty balancing and user experience. |
 
 ---
 
