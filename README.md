@@ -67,18 +67,4 @@ Access the official documentation and guidelines for **Split Shift** below.
 | **Coding Standards** | **MANDATORY.** Rules for C# scripting, Unity file structure, and Git workflow. | [**Read Docs**](./Docs/CODE-STANDARDS.md) |
 ---
 
-## About the Team
-
-Our team is composed of five members, each with a specific role to ensure the successful development and delivery of the project.
-
-| Role | Member | Key Responsibilities |
-| :--- | :--- | :--- |
-| **Project Manager (Leader), Game Designer and Artist** | Francis | - Design the overall game experience, UI/UX, and visual style.<br>- Create high-fidelity pixel art assets, character sprites, and animations.<br>- Ensure the game aesthetic is cohesive, modern, and fits the "gritty" theme. |
-| **Level and Sound Designer** | Rensen | - Design immersive level layouts, including platform placement, enemy spawns, and traps.<br>- Source and implement sound effects (SFX) and background music (BGM) to enhance atmosphere.<br>- Balance level difficulty and pacing. |
-| **Game Programmer** | Jerome | - Develop core gameplay mechanics, physics, and the "Split Shift" character swapping logic.<br>- Manage game state, data structures, and save/load systems.<br>- Handle project environment setup and build deployment.<br> Implement User Interface (UI) functionality (Main Menu, HUD, Stress Meter).<br>- Handle scene management, game transitions, and pause systems.|
-| **Game Programmer** | Mico | - Assist with gameplay scripting and interactions. |
-| **Game Quality Assurance (Tester)** | Giga | - Provide feedback on game difficulty balancing and user experience. |
-
----
-
 *Developed for the Final Project in Game Development.*
