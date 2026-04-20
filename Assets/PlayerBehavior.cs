@@ -116,6 +116,12 @@ public class PlayerBehavior : MonoBehaviour
             HandleAttack();
         }
 
+        // Check if ranged attack animation has finished
+        if (isRangedAttacking && animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
+        {
+            isRangedAttacking = false;
+        }
+
         FlipPlayerDirection();
         HandleDash();
     }
@@ -202,9 +208,6 @@ public class PlayerBehavior : MonoBehaviour
     public void HandleAttack()
     {
         PerformAttack();
-
-        if (isRangedAttacking && animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
-            isRangedAttacking = false;
     }
 
     public void PerformAttack()
